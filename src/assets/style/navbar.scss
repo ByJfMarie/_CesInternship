@@ -1,12 +1,72 @@
+@import 'app.scss';
+
 #nav {
-    padding: 30px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-logo{
+    color: $green;
   }
+
+  .nav-label{
+
+    margin-left: -40vw;
   
-  #nav a {
-    font-weight: bold;
-    color: #2c3e50;
+    a{
+      display: inline-block;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 400;
+      color: $black;
+      margin-right: 2vw;
+
+      &:hover{
+        color: $blue-light;
+      }
+
+    &::after {
+        content: '';
+        width: 0;
+        display: block;
+        height: 2px;
+        margin-top: 2px;
+        background-color: $blue-light;
+        transition: width .3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &.router-link-exact-active:after{
+      margin-left: 20%;
+      width: 60%;
+    }
+    }
   }
-  
-  #nav a.router-link-exact-active {
-    color: #42b983;
+
+  .nav-button{
+
+    button{
+      display: inline-block;
+      border: none;
+      background-color: $blue-light;
+      font-size: 25px;
+      font-weight: 100;
+      color: white;
+      border-radius: 15px;
+      padding: 5px 15px 5px 15px;
+
+      &:hover{
+        filter: brightness(103%);
+        cursor: pointer;
+      }
+    }
   }
+
+}
