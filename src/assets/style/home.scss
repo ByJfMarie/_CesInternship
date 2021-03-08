@@ -39,17 +39,28 @@
             border: 0.1px solid black;
             border-bottom: 1px solid black;
             width: 50vH;
-            height: 24vH;
+            height: auto;
+            min-height: 24vh;
             box-shadow: 0px 5px 10px 0px #000000;
             margin-bottom: 5vh;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: column;
 
             .card-top, .card-bottom{
                 display: flex;
                 justify-content: space-between;
+            }
+
+            .card-bottom {
+
+                background-color: pink;
+                flex-wrap: wrap;
+            }
+
+            .card-top {
+
+                background-color: red;
             }
 
             .card-img{
@@ -82,7 +93,6 @@
 
             .card-description{
                 text-align: left;
-                margin-top: -4vh;
                 width: 70%;
 
                 h3{
@@ -93,6 +103,7 @@
 
             .card-button{
                 align-self: flex-end;
+                margin-top: 15px;
 
                 button{
                     border: none;
