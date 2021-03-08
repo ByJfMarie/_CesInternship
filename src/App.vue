@@ -3,10 +3,10 @@
   <div id="nav">
     <div class="nav-label" id="nav-label">
       <h1 class="nav-logo">CesInternship</h1>
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/offers">Offres</router-link>
-      <router-link to="/contact">Contacts</router-link>
-      <a href="#" class="icon">
+      <router-link to="/" class="nav-a">Accueil</router-link>
+      <router-link to="/offers" class="nav-a">Offres</router-link>
+      <router-link to="/contact" class="nav-a">Contacts</router-link>
+      <a href="#" class="icon" v-on:click="menu">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -21,3 +21,18 @@
 @import "assets/style/app.scss";
 @import "assets/style/navbar.scss";
 </style>
+
+<script>
+export default {
+  methods: {
+
+    menu: function() {
+
+      var navbar = document.getElementsByClassName("nav-a")
+      for (let i = 0; i < navbar.length; i++) {
+        navbar[i].style.display = "inline-block";
+      }
+    }
+  }
+}
+</script>
