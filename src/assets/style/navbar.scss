@@ -11,19 +11,21 @@
 
   .nav-logo{
     color: $green;
+    margin-right: 5vw;
+    font-size: calc(max(25px, 1.8vw));
   }
 
   .nav-label{
 
-    margin-left: -40vw;
+    display: flex;
   
     a{
       display: inline-block;
       text-decoration: none;
-      font-size: 30px;
+      font-size: calc(max(20px, 1.6vw));
       font-weight: 400;
       color: $black;
-      margin-right: 2vw;
+      margin-left: 2vw;
 
       &:hover{
         color: $blue-light;
@@ -48,6 +50,10 @@
       width: 60%;
     }
     }
+
+    .icon {
+      display: none;
+    }
   }
 
   .nav-button{
@@ -56,12 +62,13 @@
       display: inline-block;
       border: none;
       background-color: white;
-      font-size: 25px;
+      font-size: calc(max(15px, 1.4vw));
       font-weight: 100;
       color: $blue-light;
       border-radius: 10px;
       border: 2px solid $blue-light;
       padding: 5px 15px 5px 15px;
+      transition-duration: 200ms;
 
       &:hover{
         cursor: pointer;
@@ -72,4 +79,22 @@
     }
   }
 
+}
+
+@media screen and (max-width: 675px) {
+
+  #nav {
+
+    .nav-label a {
+      display: none;
+    }
+    .nav-label a.icon {
+      display: block;
+      margin-right: 3vw;
+      margin-left: -1vw;
+      margin-top: 3px;
+      order: -1;
+    }
+  }
+  
 }

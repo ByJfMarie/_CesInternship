@@ -10,13 +10,12 @@
         width: 80%;
         text-align: center;
         display: inline-block;
-        margin-bottom: 5vw;
+        margin-bottom: 2vw;
         margin-top: 5vw;
         
     }
 
     h1{
-        margin-top: -7vh;
         margin-bottom: 3vh;
         &:hover{
             color: $green;
@@ -49,18 +48,8 @@
 
             .card-top, .card-bottom{
                 display: flex;
-                justify-content: space-between;
-            }
-
-            .card-bottom {
-
-                background-color: pink;
                 flex-wrap: wrap;
-            }
-
-            .card-top {
-
-                background-color: red;
+                justify-content: space-between;
             }
 
             .card-img{

@@ -1,12 +1,14 @@
 <template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <div id="nav">
-    <div class="nav-logo">
-      <h1>CesInternship</h1>
-    </div>
-    <div class="nav-label">
-      <router-link to="/">Acceuil</router-link>
+    <div class="nav-label" id="nav-label">
+      <h1 class="nav-logo">CesInternship</h1>
+      <router-link to="/">Accueil</router-link>
       <router-link to="/offers">Offres</router-link>
       <router-link to="/contact">Contacts</router-link>
+      <a href="#" class="icon">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <div class="nav-button">
       <button>Connexion</button>
