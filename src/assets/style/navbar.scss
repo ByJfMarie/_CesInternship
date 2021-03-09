@@ -1,6 +1,7 @@
 @import 'app.scss';
 
-#nav {
+.nav {
+  display: none;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -81,20 +82,94 @@
 
 }
 
+.navresponsive{
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  background-color: white;
+
+  .nav-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button.icon{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      border: none;
+      background: transparent;
+      order: -1;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    h1{
+      display: none;
+    }
+
+    a{
+      display: block;
+      color: $blue-light;
+      text-decoration: none;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  .nav-button{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 675px) {
 
-  #nav {
+  .nav {
 
     .nav-label a {
       display: none;
     }
-    .nav-label a.icon {
+    .nav-label button.icon {
       display: block;
-      margin-right: 3vw;
+      border: none;
+      background: transparent;
+      margin-right: 6vw;
       margin-left: -1vw;
       margin-top: 3px;
       order: -1;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
   
+}
+
+
+@keyframes SlideIn {
+  from{
+      opacity: 0;
+      height: 0px;
+  }
+  to {
+      opacity: 100%;
+      height: 25vh;
+  }
+}
+
+@keyframes SlideOut {
+  from{
+    opacity: 100%;
+    height: 25vh;
+      
+  }
+  to {
+    opacity: 0;
+    height: 0px;
+
+  }
 }
