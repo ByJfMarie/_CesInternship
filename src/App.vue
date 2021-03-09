@@ -22,7 +22,10 @@
 @import "assets/style/navbar.scss";
 </style>
 
+
 <script>
+
+
 export default {
   methods: {
     responsive: function () {
