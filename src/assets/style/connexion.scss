@@ -22,7 +22,6 @@
     .form-container {
 
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         text-align: left;
         padding-bottom: 1vw;
@@ -45,7 +44,7 @@
                 margin-bottom: 1vw;
                 font-weight: bold;
                 font-size: 17px;
-                padding-left: 2vw;
+                margin-left: 2vw;
             }
 
             input[type="text"]{
@@ -65,12 +64,21 @@
                 padding-top: 5px;
                 padding-bottom: 5px;
                 padding-right: 7px;
-                margin-left: 20px;
                 background-color: $blue-light;
                 border-radius: 5px;
                 border-style: none;
                 color: white;
 
+            }
+
+            .btn-valider {
+
+                margin-left: 2vw;
+            }
+
+            .btn-reset {
+
+                margin-left: 1vw;
             }
 
         }
@@ -91,8 +99,52 @@
 
 @media screen and (max-width: 600px) {
 
-    .form-container{
-        flex-direction: column;
+    .connexion {
+
+        width: 80%;
+        min-width: 0;
+
+        .form-container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+
+                width: 90%;
+                margin-top: 5vw;
+
+                .btn-reset, .btn-valider {
+
+                    margin-top: 2vw;
+                }
+
+                .btn-reset {
+
+                    margin-left: 3vw;
+                }
+
+                p, .btn-valider {
+
+                    margin-left: 1vw;
+                }
+            }
+    
+            .form-connection {
+                
+               border-right: none;
+                
+            }
+    
+            .form-create {
+    
+                border-left: none;
+                border-top: 2px solid gray;
+                margin-top: 5vw;
+                padding-top: 5vw;
+            }
+        }
     }
     
-  }
+    
+}
