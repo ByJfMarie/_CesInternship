@@ -65,6 +65,7 @@
                 padding-top: 5px;
                 padding-bottom: 5px;
                 padding-right: 7px;
+                margin-left: 20px;
                 background-color: $blue-light;
                 border-radius: 5px;
                 border-style: none;
@@ -86,3 +87,12 @@
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .form-container{
+        flex-direction: column;
+    }
+    
+  }
