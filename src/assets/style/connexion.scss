@@ -1,0 +1,150 @@
+@import 'app.scss';
+
+.connexion {
+
+    text-align: center;
+    justify-content: center;
+    min-width: 535px;
+    width: 50%;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0px 5px 10px 0px black;
+
+    h1 {
+
+        padding-top: 1vw;
+        font-size: 25px;
+    }
+
+    .form-container {
+
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        padding-bottom: 1vw;
+
+        form {
+
+            width: 50%;
+            margin-top: 1.5vw;
+
+            h2 {
+
+                text-align: center;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 2.5vw;
+            }
+
+            p {
+
+                margin-bottom: 1vw;
+                font-weight: bold;
+                font-size: 17px;
+                margin-left: 2vw;
+            }
+
+            input[type="text"]{
+                
+                font-size: 17px;
+                margin-top: 2px;
+                padding-left: 3px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                padding-right: 3px;
+            }
+
+            .btn-valider, .btn-reset {
+
+                font-size: 20px;
+                padding-left: 7px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 7px;
+                background-color: $blue-light;
+                border-radius: 5px;
+                border-style: none;
+                color: white;
+
+            }
+
+            .btn-valider {
+
+                margin-left: 2vw;
+            }
+
+            .btn-reset {
+
+                margin-left: 1vw;
+            }
+
+        }
+
+        .form-connection {
+            
+            border-right: 1px solid grey;
+            
+        }
+
+        .form-create {
+
+            border-left: 1px solid grey;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .connexion {
+
+        width: 80%;
+        min-width: 0;
+
+        .form-container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            form {
+
+                width: 90%;
+                margin-top: 5vw;
+
+                .btn-reset, .btn-valider {
+
+                    margin-top: 2vw;
+                }
+
+                .btn-reset {
+
+                    margin-left: 3vw;
+                }
+
+                p, .btn-valider {
+
+                    margin-left: 1vw;
+                }
+            }
+    
+            .form-connection {
+                
+               border-right: none;
+                
+            }
+    
+            .form-create {
+    
+                border-left: none;
+                border-top: 2px solid gray;
+                margin-top: 5vw;
+                padding-top: 5vw;
+            }
+        }
+    }
+    
+    
+}

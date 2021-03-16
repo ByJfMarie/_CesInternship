@@ -1,6 +1,7 @@
 @import 'app.scss';
 
-#nav {
+.nav {
+  display: none;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -11,19 +12,21 @@
 
   .nav-logo{
     color: $green;
+    margin-right: 5vw;
+    font-size: calc(max(25px, 1.8vw));
   }
 
   .nav-label{
 
-    margin-left: -40vw;
+    display: flex;
   
     a{
       display: inline-block;
       text-decoration: none;
-      font-size: 30px;
+      font-size: calc(max(20px, 1.2vw));
       font-weight: 400;
       color: $black;
-      margin-right: 2vw;
+      margin-left: 2vw;
 
       &:hover{
         color: $blue-light;
@@ -48,6 +51,10 @@
       width: 60%;
     }
     }
+
+    .icon {
+      display: none;
+    }
   }
 
   .nav-button{
@@ -56,12 +63,13 @@
       display: inline-block;
       border: none;
       background-color: white;
-      font-size: 25px;
+      font-size: calc(max(15px, 1.1vw));
       font-weight: 100;
       color: $blue-light;
       border-radius: 10px;
       border: 2px solid $blue-light;
       padding: 5px 15px 5px 15px;
+      transition-duration: 200ms;
 
       &:hover{
         cursor: pointer;
@@ -72,4 +80,96 @@
     }
   }
 
+}
+
+.navresponsive{
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  background-color: white;
+
+  .nav-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button.icon{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      border: none;
+      background: transparent;
+      order: -1;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    h1{
+      display: none;
+    }
+
+    a{
+      display: block;
+      color: $blue-light;
+      text-decoration: none;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  .nav-button{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 675px) {
+
+  .nav {
+
+    .nav-label a {
+      display: none;
+    }
+    .nav-label button.icon {
+      display: block;
+      border: none;
+      background: transparent;
+      margin-right: 6vw;
+      margin-left: -1vw;
+      margin-top: 3px;
+      order: -1;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  
+}
+
+
+@keyframes SlideIn {
+  from{
+      opacity: 0;
+      height: 0px;
+  }
+  to {
+      opacity: 100%;
+      height: 25vh;
+  }
+}
+
+@keyframes SlideOut {
+  from{
+    opacity: 100%;
+    height: 25vh;
+      
+  }
+  to {
+    opacity: 0;
+    height: 0px;
+
+  }
 }
