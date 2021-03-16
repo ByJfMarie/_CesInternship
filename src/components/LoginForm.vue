@@ -3,27 +3,27 @@
       <h1>Connexion</h1>
       <div class="form-container">
           <form action="" method="post" class="form-connection">
-              <h2>Vous possédez déjà un compte ?</h2>
+              <h2>You already have a account ?</h2>
               <p>
                   Email <br>
                   <input type="text" id="email" name="email">
               </p>
               <p>
-                  Mot de passe <br>
+                  Password <br>
                   <input type="text" id="pswd" name="pswd">
               </p>
               
-              <input type="submit" value="Valider" class="btn-valider">
-              <input type="reset" value="Réinitialiser" class="btn-reset">
+              <input type="submit" value="Submit" class="btn-valider">
+              <input type="reset" value="Reset" class="btn-reset">
           </form>
           <form action="" method="post" class="form-create">
-              <h2>Pas encore de compte ?</h2>
+              <h2>Don't have a account yet ?</h2>
               <p>
-                  Nom <br>
+                  First Name<br>
                   <input type="text" id="nom" name="nom">
               </p>
               <p>
-                  Prénom <br>
+                  Last Name <br>
                   <input type="text" id="prenom" name="prenom">
               </p>
               <p>
@@ -31,7 +31,7 @@
                   <input type="text" id="email" name="email">
               </p>
               <p>
-                  Centre <br>
+                  Center <br>
                   <input type="text" id="centre" name="centre">
               </p>
               <p>
@@ -39,12 +39,12 @@
                   <input type="text" id="promo" name="promo">
               </p>
               <p>
-                  Mot de passe <br>
+                  Password <br>
                   <input type="text" id="pswd" name="pswd">
               </p>
         
-              <input type="submit" value="Valider" class="btn-valider">
-              <input type="reset" value="Réinitialiser" class="btn-reset">
+              <input type="submit" value="Submit" class="btn-valider">
+              <input type="reset" value="Reset" class="btn-reset">
 
           </form>
       </div>

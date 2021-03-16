@@ -12,11 +12,11 @@
         </div>
       </div>
       <div class="text-container">
-        <p>Ici mettre des renseignements sur le site</p>
+        <p>Here put site's information</p>
       </div>
     </div>
     <hr />
-    <h1>Voir toutes les offres >></h1>
+    <h1>See all the offers >></h1>
     <div class="bottom-banner">
       <div v-for="data in cardData" class="card">
         <div class="card-top">
@@ -33,11 +33,11 @@
         </div>
         <div class="card-bottom">
           <div class="card-description">
-            <h3>Description du poste</h3>
+            <h3>Description</h3>
             <p>{{ data.description }}</p>
           </div>
           <div class="card-button">
-            <button>Voir plus</button>
+            <button>See More</button>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ const cardData = [
   {
     id: 1,
     description:
-      "Ici y'a la description de l'offre Ici y'a la description de l'offre Ici y'a la description de l'offre",
+      "Here is the offer's description Here is the offer's description Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
     competences: [
       "Angular",
@@ -78,13 +78,13 @@ const cardData = [
   },
   {
     id: 2,
-    description: "Ici y'a la description de l'offre",
+    description: "Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
     competences: ["Angular", "React"],
   },
   {
     id: 3,
-    description: "Ici y'a la description de l'offre",
+    description: "Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
     competences: ["Angular", "React"],
   },
