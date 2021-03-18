@@ -57,29 +57,6 @@
     }
   }
 
-  .nav-button{
-
-    button{
-      display: inline-block;
-      border: none;
-      background-color: white;
-      font-size: calc(max(15px, 1.1vw));
-      font-weight: 100;
-      color: $blue-light;
-      border-radius: 10px;
-      border: 2px solid $blue-light;
-      padding: 5px 15px 5px 15px;
-      transition-duration: 200ms;
-
-      &:hover{
-        cursor: pointer;
-        background-color: $blue-light;
-        color: white;
-        transition-duration: 200ms;
-      }
-    }
-  }
-
 }
 
 .navresponsive{

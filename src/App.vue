@@ -10,9 +10,6 @@
         <i class="fa fa-bars fa-2x"></i>
       </button>
     </div>
-    <div class="nav-button">
-      <button >Connexion</button>
-    </div>
   </div>
   <router-view />
 </template>
