@@ -1,0 +1,56 @@
+@import 'app.scss';
+
+.case {
+    position:relative;
+    float: left;
+    background: white;
+    left: 50px;
+    border: 2px solid lightgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    float:left;
+
+}
+
+a:hover {
+    color: black;
+}
+
+.statut {
+    position:relative;
+    float:left;
+    left: 120px;
+    background:#63BFE8; 
+    color:white;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+}
+
+.delete {
+    color: white;
+    background-color: #DC3545;
+    border: none;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    position:relative;
+    float:left;
+    left: 130px;
+    font-size: 14px;
+}
+
+.delete:hover {
+    background-color: #C82333;
+}

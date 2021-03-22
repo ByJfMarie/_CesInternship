@@ -2,6 +2,9 @@
   <div class="about">
     <NavBar />
     <Profil />
+    <MyOffersDisplay />
+    <MyOffersDisplay />
+    <MyOffersDisplay />
   </div>
 </template>
 
@@ -9,12 +12,14 @@
 
 import Profil from '@/components/Profil.vue'
 import NavBar from '@/components/NavBar.vue'
+import MyOffersDisplay from '../components/MyOffersDisplay.vue'
 
 export default {
   name: 'About',
   components: {
     Profil,
-    NavBar
+    NavBar,
+    MyOffersDisplay
   }
 }
 </script>
