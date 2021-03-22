@@ -19,28 +19,8 @@
     <hr />
     <h1>See all the offers >></h1>
     <div class="bottom-banner">
-      <div v-for="data in cardData" class="card">
-        <div class="card-top">
-          <div class="card-img">
-            <img :src="data.img" alt="" />
-          </div>
-          <div class="card-competence">
-            <ul class="list-container">
-              <li v-for="competence in data.competences" class="list">
-                {{ competence }}
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-bottom">
-          <div class="card-description">
-            <h3>Description</h3>
-            <p>{{ data.description }}</p>
-          </div>
-          <div class="card-button">
-            <button>See More</button>
-          </div>
-        </div>
+      <div v-for="data in cardData">
+        <OfferCard :data="data" />
       </div>
     </div>
   </div>
@@ -49,7 +29,8 @@
 
 
 <script>
-  import NavBar from '@/components/NavBar.vue'
+  import NavBar from '@/components/NavBar.vue';
+  import OfferCard from '@/components/OfferCard.vue';
 // @ is an alias to /src
 
   // Import Swiper Vue.js components
@@ -70,7 +51,7 @@ const cardData = [
     description:
       "Here is the offer's description Here is the offer's description Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
-    competences: [
+    tags: [
       "Angular",
       "React",
       "React",
@@ -84,13 +65,13 @@ const cardData = [
     id: 2,
     description: "Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
-    competences: ["Angular", "React"],
+    tags: ["Angular", "React"],
   },
   {
     id: 3,
     description: "Here is the offer's description",
     img: "https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg",
-    competences: ["Angular", "React"],
+    tags: ["Angular", "React"],
   },
 ];
 
@@ -99,7 +80,8 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    NavBar
+    NavBar,
+    OfferCard
   },
   data() {
     return {

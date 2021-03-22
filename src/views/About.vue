@@ -24,6 +24,7 @@ export default {
     MyOffersDisplay
   }
 }
+
 </script>
 
 <style scoped lang="scss">

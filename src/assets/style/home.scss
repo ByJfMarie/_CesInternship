@@ -64,84 +64,13 @@
         justify-content: space-around;
         align-items: flex-end;
         flex-wrap: wrap;
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
 
+        div {
 
-        .card{
-            padding: 25px 25px 25px 25px;
-            border: 0.1px solid black;
-            border-bottom: 1px solid black;
-            width: 50vH;
-            height: auto;
-            min-height: 24vh;
-            box-shadow: 0px 5px 10px 0px #000000;
-            margin-bottom: 5vh;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-
-            .card-top, .card-bottom{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            .card-img{
-                width: 35%;
-
-                img{
-                    width: 100%;
-                }
-            }
-
-            .card-competence{
-                
-                width: 60%;
-                max-height: 100%;
-
-                ul{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-
-                    li{
-                        flex: 1 1 30%;
-                        list-style-type: none;
-                        color: $blue-dark;
-                        font-size: 20px;
-                        margin-bottom: 3px;
-                    }
-                }
-            }
-
-            .card-description{
-                text-align: left;
-                width: 70%;
-
-                h3{
-                    display: inline-block;
-                    margin-bottom: 5px;
-                }
-            }
-
-            .card-button{
-                align-self: flex-end;
-                margin-top: 15px;
-
-                button{
-                    border: none;
-                    background-color: $blue-light;
-                    color: white;
-                    padding: 5px 25px 5px 25px;
-                    font-size: 16px;
-
-                    &:hover{
-                        cursor: pointer;
-                        filter: brightness(104%);
-                        box-shadow: 5px 5px 10px 0px #00000049;
-                    }
-
-                }
-            }
+            margin-bottom: 30px;
         }
     }
 }
