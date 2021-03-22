@@ -14,6 +14,7 @@
     <br>
     <input type='button' value="My Offers" class="MyOffers">
     <span class="vertical-line"></span>
+    <br>
   </div>
 </template>
 
@@ -24,5 +25,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/style/about.scss";
+  @import "../assets/style/profil.scss";
 </style>

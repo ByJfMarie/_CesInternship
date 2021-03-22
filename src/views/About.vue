@@ -2,9 +2,11 @@
   <div class="about">
     <NavBar />
     <Profil />
+    <div style="display: flex; flex-direction:column; max-width: 480px;">
     <MyOffersDisplay />
     <MyOffersDisplay />
     <MyOffersDisplay />
+    </div>
   </div>
 </template>
 
