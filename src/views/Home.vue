@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <NavBar />
     <div class="top-banner">
       <div class="caroussel">
         <div class="conatiner-swip">
@@ -45,7 +46,10 @@
   </div>
 </template>
 
+
+
 <script>
+  import NavBar from '@/components/NavBar.vue'
 // @ is an alias to /src
 
   // Import Swiper Vue.js components
@@ -95,6 +99,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    NavBar
   },
   data() {
     return {
@@ -112,6 +117,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "../assets/style/home.scss";
+<style scoped lang="scss">
+  @import "../assets/style/home.scss";
 </style>

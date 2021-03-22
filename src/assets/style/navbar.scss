@@ -1,18 +1,16 @@
 @import 'app.scss';
 
 .nav {
-  display: none;
   width: 100%;
   height: 10vh;
   display: flex;
-  padding-left: 5vw;
-  padding-right: 5vw;
   justify-content: space-between;
   align-items: center;
 
   .nav-logo{
     color: $green;
     margin-right: 5vw;
+    margin-left: 3vw;
     font-size: calc(max(25px, 1.8vw));
   }
 
@@ -54,29 +52,6 @@
 
     .icon {
       display: none;
-    }
-  }
-
-  .nav-button{
-
-    button{
-      display: inline-block;
-      border: none;
-      background-color: white;
-      font-size: calc(max(15px, 1.1vw));
-      font-weight: 100;
-      color: $blue-light;
-      border-radius: 10px;
-      border: 2px solid $blue-light;
-      padding: 5px 15px 5px 15px;
-      transition-duration: 200ms;
-
-      &:hover{
-        cursor: pointer;
-        background-color: $blue-light;
-        color: white;
-        transition-duration: 200ms;
-      }
     }
   }
 
@@ -129,6 +104,10 @@
 
   .nav {
 
+    .nav-logo {
+
+      margin-left: 0;
+    }
     .nav-label a {
       display: none;
     }
@@ -137,7 +116,7 @@
       border: none;
       background: transparent;
       margin-right: 6vw;
-      margin-left: -1vw;
+      margin-left: 5vw;
       margin-top: 3px;
       order: -1;
 

@@ -1,9 +1,14 @@
 <template>
   <div class="connexion">
+<<<<<<< HEAD
       <h1>Connexion</h1>
       <div class="form-container">
           <form action="" method="post" class="form-connection">
               <h2>You already have a account ?</h2>
+=======
+      <h1>Connection</h1>
+          <form action="" method="post">
+>>>>>>> a2106c812b6f11c3dd48e29fd317a734e83064ac
               <p>
                   Email <br>
                   <input type="text" id="email" name="email">
@@ -16,6 +21,7 @@
               <input type="submit" value="Submit" class="btn-valider">
               <input type="reset" value="Reset" class="btn-reset">
           </form>
+<<<<<<< HEAD
           <form action="" method="post" class="form-create">
               <h2>Don't have a account yet ?</h2>
               <p>
@@ -48,6 +54,8 @@
 
           </form>
       </div>
+=======
+>>>>>>> a2106c812b6f11c3dd48e29fd317a734e83064ac
   </div>
 </template>
 
