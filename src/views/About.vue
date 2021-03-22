@@ -1,19 +1,19 @@
 <template>
   <div class="about">
     <NavBar />
-    <LoginForm />
+    <Profil />
   </div>
 </template>
 
 <script>
 
-import LoginForm from '@/components/LoginForm.vue'
+import Profil from '@/components/Profil.vue'
 import NavBar from '@/components/NavBar.vue'
 
 export default {
   name: 'About',
   components: {
-    LoginForm,
+    Profil,
     NavBar
   }
 }

@@ -1,1 +1,63 @@
 @import 'app.scss';
+
+p {
+    position: relative;
+    text-align: left;
+    margin-left: 30px;
+    top: 90px;
+    left: 40px;
+  }
+  
+  img {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -25%;
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+  }
+  
+  .ProfilImg {
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 60px;
+  }
+  
+  input {
+      position:relative;
+      float:left;
+      top:200px;
+    right:100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background: white;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    color: grey;
+  }
+  
+  input:hover {
+    color: white;
+    background: #29768e;
+  }
+  
+  .MyProfil {
+    padding-right: 130px;
+  }
+  
+  .MyOffers {
+    padding-right: 124px;
+  }
+  
+  .vertical-line {
+    position:relative;
+    float:left;
+    border-left: 2px solid lightgrey;
+    display: inline-block;
+    height: 500px;
+  }
