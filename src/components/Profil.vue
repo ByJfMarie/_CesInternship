@@ -1,20 +1,19 @@
 <template>
-  <div>
-      <div class="ProfilImg">
+  <div class="profil-container">
+    <div class="profil">
       <img src="../assets/images/img.jpg" alt="" />
+      <div>
+        <p>First Name</p>
+        <p>Last Name</p>
       </div>
+    </div>
     <p>
-    First Name
-    <br>
-    Last Name
-    <br>
+      Description
     </p>
-    <input type="button" value="My Profil" class="MyProfil">
-    <br>
-    <br>
-    <input type='button' value="My Offers" class="MyOffers">
-    <span class="vertical-line"></span>
-    <br>
+    <div class="input-container">
+      <router-link to="" class="profil-input">My Profil</router-link>
+      <router-link to="/my-offers" class="offer-input">My Offers</router-link>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 @import 'app.scss';
 
-p {
+/*p {
     position: relative;
     text-align: left;
     font-size: 22px;
@@ -64,4 +64,108 @@ p {
     border-left: 2px solid lightgrey;
     display: inline-block;
     height: 500px;
+  }*/
+
+  .profil-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: flex-start;
+
+    .profil {
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+
+      img {
+
+        width: 55%;
+      }
+
+      p {
+
+        margin-left: 15px;
+        margin-top: 0;
+        font-size: 20px;
+        text-align: left;
+        color: black;
+      }
+    }
+
+    p {
+
+      margin-top: 10px;
+      font-size: 16px;
+      color: gray;
+    }
+
+    .input-container {
+
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+
+      a {
+
+        font-size: 18px;
+        padding: 5px;
+        text-align: left;
+        color: gray;
+        border: 1px solid gray;
+        border-radius: 2px;
+        transition-duration: 100ms;
+        background-color: white;
+        text-decoration: none;
+
+        &:hover {
+
+          color: white;
+          background-color: $blue-dark;
+          transition-duration: 100ms;
+          border-color: $blue-dark;
+        }
+      }
+
+      .offer-input {
+
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    .profil-container {
+
+      width: 200px;
+
+      .profil {
+
+        flex-direction: column;
+        align-items: center;
+
+        img {
+
+          width: 90%;
+        }
+      }
+
+      p {
+
+        margin-top: 20px;
+        align-self: center;
+        width: 90%;
+        text-align: left;
+      }
+
+      .input-container {
+
+        width: 90%;
+        align-self: center;
+      }
+    }
   }

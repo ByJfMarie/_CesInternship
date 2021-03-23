@@ -1,12 +1,7 @@
 <template>
   <div class="about">
     <NavBar />
-    <Profil />
-    <div style="display: flex; flex-direction:column; max-width: 480px;">
-    <MyOffersDisplay />
-    <MyOffersDisplay />
-    <MyOffersDisplay />
-    </div>
+    <MyOfferCard />
   </div>
 </template>
 
@@ -14,14 +9,14 @@
 
 import Profil from '@/components/Profil.vue'
 import NavBar from '@/components/NavBar.vue'
-import MyOffersDisplay from '../components/MyOffersDisplay.vue'
+import MyOfferCard from '../components/MyOfferCard.vue'
 
 export default {
   name: 'About',
   components: {
     Profil,
     NavBar,
-    MyOffersDisplay
+    MyOfferCard
   }
 }
 
