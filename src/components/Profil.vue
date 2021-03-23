@@ -7,9 +7,7 @@
         <p>Last Name</p>
       </div>
     </div>
-    <p>
-      Description
-    </p>
+    <p>Description</p>
     <div class="input-container">
       <router-link to="" class="profil-input">My Profil</router-link>
       <router-link to="/my-offers" class="offer-input">My Offers</router-link>
@@ -24,5 +22,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../assets/style/profil.scss";
+@import "../assets/style/profil.scss";
 </style>
