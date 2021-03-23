@@ -9,7 +9,7 @@
     Last Name
     <br>
     </p>
-    <input type="button" value="My Profil" class="MyProfil">
+    <input type="button" value="My Account" class="MyAccount">
     <br>
     <br>
     <input type='button' value="My Offers" class="MyOffers">

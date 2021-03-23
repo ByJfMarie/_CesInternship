@@ -25,6 +25,13 @@
       <br>
       <br>
       <p>Student</p>
+      <br>
+      <br>
+      <br>
+      <input type="button" class="disconnect" value="Disconnect">
+      <br>
+      <br>
+      <input type="button" class="delete" value="Delete Account">
   </div>
 </template>
 
@@ -34,20 +41,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
-span{
-    position: relative;
-    float:left;
-    font-size: 18px;
-    left: 50px;
-}
-
-p{
-    position:relative;
-    float:left;
-    left: 50px;
-    color: grey;
-}
-
+<style scoped lang="scss">
+    @import "../assets/style/myAccountDisplay.scss";
 </style>
