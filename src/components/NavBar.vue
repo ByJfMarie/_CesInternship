@@ -2,8 +2,12 @@
   <div class="nav" id="nav">
     <div class="nav-label" id="nav-label">
       <h1 class="nav-logo">CesInternship</h1>
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/offers">Offres</router-link>
+      <router-link to="/" class="navLink">Accueil</router-link>
+      <router-link to="/offers" class="navLink">Offres</router-link>
+      <div class="navProfil">
+        <router-link to="my-profil" class="profilLink">My Profil</router-link>
+        <img src="https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg" alt="">
+      </div>
       <button @click="responsive" href="#" class="icon">
         <i class="fa fa-bars fa-2x"></i>
       </button>

@@ -83,19 +83,23 @@
       img {
 
         width: 55%;
+        clip-path: circle();
       }
 
-      p {
+      .name-container {
 
-        margin-left: 15px;
-        margin-top: 0;
-        font-size: 20px;
-        text-align: left;
-        color: black;
+        p {
+
+          //margin-left: 15px;
+          margin-top: 0;
+          font-size: 20px;
+          text-align: left;
+          color: black;
+        }
       }
     }
 
-    p {
+    .description {
 
       margin-top: 10px;
       font-size: 16px;
@@ -152,9 +156,21 @@
 
           width: 90%;
         }
+
+        .name-container {
+          
+          width: 90%;
+
+          p {
+
+            text-align: center;
+          }
+        }
+
+        
       }
 
-      p {
+      .description {
 
         margin-top: 20px;
         align-self: center;

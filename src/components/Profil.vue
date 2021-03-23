@@ -2,12 +2,12 @@
   <div class="profil-container">
     <div class="profil">
       <img src="../assets/images/img.jpg" alt="" />
-      <div>
+      <div class="name-container">
         <p>First Name</p>
         <p>Last Name</p>
       </div>
     </div>
-    <p>Description</p>
+    <p class="description">Description</p>
     <div class="input-container">
       <router-link to="" class="profil-input">My Profil</router-link>
       <router-link to="/my-offers" class="offer-input">My Offers</router-link>

@@ -17,8 +17,9 @@
   .nav-label{
 
     display: flex;
+    align-items: center;
   
-    a{
+    a {
       display: inline-block;
       text-decoration: none;
       font-size: calc(max(20px, 1.2vw));
@@ -29,6 +30,8 @@
       &:hover{
         color: $blue-light;
       }
+
+      
 
     &::after {
         content: '';
@@ -50,6 +53,27 @@
     }
     }
 
+    .navProfil {
+
+      width: calc(max(270px, 20%));
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      justify-content: flex-end;
+
+      img {
+        
+        width: 40%;
+        
+        clip-path: circle();    
+      }
+
+      .profilLink {
+
+        margin-right: 10px;
+      }
+    }
+
     .icon {
       display: none;
     }
@@ -68,6 +92,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .navProfil {
+
+      img {
+        display: none;
+
+      }  
+    }
 
     button.icon{
       position: absolute;
@@ -108,21 +140,33 @@
 
       margin-left: 0;
     }
-    .nav-label a {
-      display: none;
-    }
-    .nav-label button.icon {
-      display: block;
-      border: none;
-      background: transparent;
-      margin-right: 6vw;
-      margin-left: 5vw;
-      margin-top: 3px;
-      order: -1;
+    .nav-label {
+      
+      a {
 
-      &:hover{
-        cursor: pointer;
+        display: none;
       }
+
+      .navProfil {
+
+        display: none;
+      }
+
+      button.icon {
+
+        display: block;
+        border: none;
+        background: transparent;
+        margin-right: 6vw;
+        margin-left: 5vw;
+        margin-top: 3px;
+        order: -1;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      
     }
   }
   
