@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <NavBar />
-    <MyOfferCard />
+    <MyAccountDisplay />
   </div>
 </template>
 
