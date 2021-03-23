@@ -4,7 +4,6 @@
       <h1 class="nav-logo">CesInternship</h1>
       <router-link to="/">Accueil</router-link>
       <router-link to="/offers">Offres</router-link>
-      <router-link to="/contact">Contacts</router-link>
       <button @click="responsive" href="#" class="icon">
         <i class="fa fa-bars fa-2x"></i>
       </button>
