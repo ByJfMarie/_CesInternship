@@ -44,12 +44,6 @@ export default {
         await axios.get("/sanctum/csrf-cookie");
         await axios.post("/logout", this.form);
 
-        // let response = await axios.get("/api/user");
-
-        // this.$store.commit("setAuth", response.data);
-
-        // console.log(this.$store.state.user);
-
         this.$router.push("/");
       } catch (error) {
         this.errors = error.response.data.errors;

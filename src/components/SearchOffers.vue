@@ -4,9 +4,10 @@
         <input class="search" type="text" placeholder="Search">
         <input class="searchbutton" type="button" value="Search">
         <br>
+        <br>
         <span>Location</span>
         <br>
-        <div class="location">
+        <div>
         <select name="country">
             <option value="">Choose a Country...</option>
             <option value="France">France</option>

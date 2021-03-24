@@ -4,8 +4,9 @@
     position:relative;
     float:left;
     background-color: #E8E8E8;
-    width: 400px;
+    max-width: 300px;
     height: 800px;
+    margin-right: 50px;
 }
 
 .form {
@@ -16,7 +17,7 @@
 
 .search{
     float:left;
-    width: 280px;
+    width: 180px;
     padding:4px;
     border-style: none;
     border-radius: 2px;
@@ -55,9 +56,4 @@ select {
     padding-top: 10px;
     color: grey;
     border: solid lightgrey 1px;
-}
-
-.location{
-    position:relative;
-    float:left;
 }
