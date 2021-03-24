@@ -19,6 +19,7 @@
       <router-link to="/my-offers" class="offer-input">My Offers</router-link>
     </div>
   </div>
+  <span class="vertical-line"></span>
 </template>
 
 <script>

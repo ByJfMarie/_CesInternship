@@ -1,13 +1,16 @@
 <template>
-  <NavBar />
-
-  <div class="profil-container">
+  <div>
+      <NavBar />
+      <div class="profil-container">
       <Profil />
       <div class="line"></div>
       <div class="myoffers-container">
           <MyProfilForm />
       </div>
   </div>
+  </div>
+
+  
 </template>
 
 <script>
