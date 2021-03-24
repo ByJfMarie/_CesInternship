@@ -17,7 +17,7 @@
     <span>Promotion</span>
     <br />
     <br />
-    <p>CPI A2</p>
+    <p v-if="$store.state.user">{{ $store.state.user.promotion }}</p>
     <br />
     <br />
     <br />
@@ -28,19 +28,37 @@
     <br />
     <br />
     <br />
-    <form action="">
-      <input type="button" class="disconnect" value="Disconnect" />
-      <br />
-      <br />
-      <input type="button" class="delete" value="Delete Account" />
+    <form action="" method="post" @submit.prevent="handleLogout">
+      <input type="submit" class="disconnect" value="DECO" />
     </form>
-    
+    <br />
+    <br />
+    <input type="button" class="delete" value="Delete Account" />
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "MyProfilForm",
+  methods: {
+    async handleLogout() {
+      try {
+        await axios.get("/sanctum/csrf-cookie");
+        await axios.post("/logout", this.form);
+
+        // let response = await axios.get("/api/user");
+
+        // this.$store.commit("setAuth", response.data);
+
+        // console.log(this.$store.state.user);
+
+        this.$router.push("/");
+      } catch (error) {
+        this.errors = error.response.data.errors;
+      }
+    },
+  },
 };
 </script>
 

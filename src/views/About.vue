@@ -2,6 +2,7 @@
   <div class="about">
     <NavBar />
     <MyProfilForm />
+
   </div>
 </template>
 
