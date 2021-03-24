@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <NavBar />
-    <MyProfilForm />
-
+    <MyAccountDisplay />
+    <Profil />
   </div>
 </template>
 
