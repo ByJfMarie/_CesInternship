@@ -1,7 +1,12 @@
 <template>
   <div class="about">
     <NavBar />
+<<<<<<< Updated upstream
     <SearchOffers />
+=======
+    <MyAccountDisplay />
+    <Profil />
+>>>>>>> Stashed changes
   </div>
 </template>
 
