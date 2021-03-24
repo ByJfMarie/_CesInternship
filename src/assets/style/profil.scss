@@ -1,72 +1,6 @@
 @import 'app.scss';
 
-/*p {
-    position: relative;
-    text-align: left;
-    font-size: 22px;
-    margin-left: 30px;
-    top: 90px;
-    left: 20px;
-  }
-  
-  img {
-    display: inline;
-    margin: 0 auto;
-    margin-left: -25%;
-    border-radius: 50%;
-    height: 100%;
-    width: auto;
-  }
-  
-  .ProfilImg {
-    float: left;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-left: 15px;
-    margin-top: 70px;
-  }
-  
-  input {
-    position:relative;
-    float:left;
-    font-size: 18px;
-    top:200px;
-    right:100px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    background: white;
-    border-color: rgb(235, 235, 235);
-    border-width: 2px;
-    color: grey;
-    border-radius: 2px;
-    border-style:solid;
-  }
-  
-  input:hover {
-    color: white;
-    background: #29768e;
-  }
-  
-  .MyAccount {
-    padding-right: 87px;
-  }
-  
-  .MyOffers {
-    padding-right: 102px;
-  }
-  
-  .vertical-line {
-    position:relative;
-    float:left;
-    border-left: 2px solid lightgrey;
-    display: inline-block;
-    height: 500px;
-  }*/
-
-  .profil-container {
+  .myprofil-container {
 
     display: flex;
     flex-direction: column;
@@ -90,7 +24,6 @@
 
         p {
 
-          //margin-left: 15px;
           margin-top: 0;
           font-size: 20px;
           text-align: left;
@@ -132,6 +65,13 @@
           transition-duration: 100ms;
           border-color: $blue-dark;
         }
+      }
+
+      .router-link-exact-active{
+
+        color: white;
+        background-color: $blue-dark;
+        border-color: $blue-dark;
       }
 
       .offer-input {
@@ -183,5 +123,6 @@
         width: 90%;
         align-self: center;
       }
+      
     }
   }

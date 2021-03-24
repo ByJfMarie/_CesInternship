@@ -1,7 +1,7 @@
 <template>
   <NavBar />
 
-  <div class="myprofil-container">
+  <div class="profil-container">
       <Profil />
       <div class="line"></div>
       <div class="myoffers-container">

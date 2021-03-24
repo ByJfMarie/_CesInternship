@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: "MyOffersDisplay"
+    name: "MyOfferCard"
 }
 </script>
 

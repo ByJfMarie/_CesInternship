@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="myaccount-container">
     <span>Email</span>
     <br />
     <br />
@@ -28,19 +28,22 @@
     <br />
     <br />
     <br />
-    <input type="button" class="disconnect" value="Disconnect" />
-    <br />
-    <br />
-    <input type="button" class="delete" value="Delete Account" />
+    <form action="">
+      <input type="button" class="disconnect" value="Disconnect" />
+      <br />
+      <br />
+      <input type="button" class="delete" value="Delete Account" />
+    </form>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: "MyAccountDisplay",
+  name: "MyProfilForm",
 };
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/myAccountDisplay.scss";
+  @import "../assets/style/myprofilform.scss";
 </style>
