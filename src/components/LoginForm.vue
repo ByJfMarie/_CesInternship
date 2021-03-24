@@ -43,7 +43,7 @@ export default {
 
         this.$store.commit("setAuth", response.data);
 
-        console.log(this.$store.state.user.name);
+        console.log(this.$store.state.user);
 
         this.$router.push("about");
       } catch (error) {
