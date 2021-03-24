@@ -1,28 +1,30 @@
 <template>
-  <NavBar />
+    <div>
+        <NavBar />
 
-  <div class="profil-container">
-      <Profil />
-      <div class="line"></div>
-      <div class="myoffers-container">
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-          <MyOfferCard />
-      </div>
-  </div>
+        <div class="profil-container">
+            <Profil />
+            <div class="line"></div>
+            <div class="myoffers-container">
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+                <MyOfferCard />
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

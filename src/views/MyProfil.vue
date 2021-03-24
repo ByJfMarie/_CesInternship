@@ -1,16 +1,15 @@
 <template>
-  <div>
-      <NavBar />
-      <div class="profil-container">
-      <Profil />
-      <div class="line"></div>
-      <div class="myoffers-container">
-          <MyProfilForm />
-      </div>
-  </div>
-  </div>
+    <div>
+        <NavBar />
 
-  
+        <div class="profil-container">
+            <Profil />
+            <div class="line"></div>
+            <div class="myprofil-container">
+                <MyProfilForm />
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

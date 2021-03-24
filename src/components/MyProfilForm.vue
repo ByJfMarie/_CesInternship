@@ -29,11 +29,8 @@
     <br />
     <br />
     <form action="" method="post" @submit.prevent="handleLogout">
-      <input type="submit" class="disconnect" value="DECO" />
+      <input type="submit" class="disconnect" value="Disconnect" />
     </form>
-    <br />
-    <br />
-    <input type="button" class="delete" value="Delete Account" />
   </div>
 </template>
 

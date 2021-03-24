@@ -13,7 +13,7 @@
         background-color: grey;
     }
 
-    .myoffers-container {
+    .myprofil-container {
 
         width: 75%;
         margin-left: auto;
@@ -22,7 +22,6 @@
         margin-right: 25px;
         padding-right: 25px;
         height: 700px;
-        overflow: auto;
     }
 }
 
@@ -36,7 +35,7 @@
 
 @media screen and (max-width: 750px) {
 
-    .myprofil-container {
+    .profil-container {
 
         flex-direction: column;
         align-items: center;
@@ -53,14 +52,14 @@
             margin-bottom: 30px;
         }
 
-        .myoffers-container {
+        .myprofil-container {
 
             width: 100%;
-            overflow: hidden;
             height: auto;
             margin-left: 0;
             margin-right: 0;
             padding-right: 0;
+            align-items: center;
         }
     }
 }
