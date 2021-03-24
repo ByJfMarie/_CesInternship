@@ -1,0 +1,60 @@
+@import "app.scss";
+
+.NewDelegate-container {
+
+    float:left;
+    position:relative;
+    margin: 20px;
+    margin-right: 400px;
+    margin-bottom: 40px;
+
+    input[type="text"]{
+        width: 200px;
+        padding: 2px;
+        border-radius: 2px;
+        border: solid grey 1px;
+    }
+
+    input[type="button"]{
+        width: 60px;
+        padding: 2px;
+        border-radius: 2px;
+        border: solid grey 1px;
+        background-color: $blue-light;
+        color: white;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: $blue-dark;
+        }
+    }
+
+    a {
+        font-size:14px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 2px;
+        padding-right:15px;
+        padding-left: 15px;
+        color: gray;
+        border: 1px solid gray;
+        border-radius: 2px;
+        transition-duration: 100ms;
+        background-color: white;
+        text-decoration: none;
+
+        &:hover {
+
+          color: white;
+          background-color: $blue-dark;
+          transition-duration: 100ms;
+          border-color: $blue-dark;
+        }
+      }
+}
+
+.right-container {
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+}

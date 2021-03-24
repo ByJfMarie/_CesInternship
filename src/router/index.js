@@ -31,9 +31,9 @@ const routes = [
     component: () => import('../views/Offers.vue')
   },
   {
-    path: '/my-profil',
-    name: 'MyProfil',
-    component: () => import('../views/MyProfil.vue')
+    path: '/new-delegate',
+    name: 'NewDelegate',
+    component: () => import('../views/NewDelegate.vue')
   }
   
 ]
