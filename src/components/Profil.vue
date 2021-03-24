@@ -2,15 +2,9 @@
   <div class="profil-container">
     <div class="profil">
       <img src="../assets/images/img.jpg" alt="" />
-<<<<<<< Updated upstream
-      <div class="name-container">
-        <p>First Name</p>
-        <p>Last Name</p>
-=======
       <div>
         <p v-if="$store.state.user">{{ $store.state.user.first_name }}</p>
         <p v-if="$store.state.user">{{ $store.state.user.last_name }}</p>
->>>>>>> Stashed changes
       </div>
     </div>
     <p class="description">Description</p>

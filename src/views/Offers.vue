@@ -1,13 +1,28 @@
 <template>
   <div class="offer">
-    <login-form></login-form>
+    <NavBar />
+    <SearchOffers />
+    <SearchOfferCard />
+    <SearchOfferCard />
+    <SearchOfferCard />
+    <SearchOfferCard />
+    <SearchOfferCard />
+    <SearchOfferCard />
+    
   </div>
 </template>
 
 <script>
-import LoginForm from "../components/LoginForm.vue";
+import NavBar from "../components/NavBar.vue";
+import SearchOffers from "../components/SearchOffers.vue";
+import SearchOfferCard from '@/components/SearchOfferCard.vue';
+
 export default {
-  components: { LoginForm },
+  components: {
+  NavBar,
+  SearchOffers,
+  SearchOfferCard
+  },
 };
 </script>
 

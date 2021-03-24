@@ -1,0 +1,30 @@
+@import 'app.scss';
+
+.myoffer-container {
+
+    display: flex;
+    max-width: 1000px;
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+
+    span {
+
+        a {
+
+            text-decoration: none;
+            color: grey;
+
+            &:hover {
+
+                color: black;
+            }
+        }
+    }
+
+    input {
+
+        justify-self: flex-end;
+    }
+}
