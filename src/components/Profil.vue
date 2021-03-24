@@ -9,10 +9,11 @@
     </div>
     <p class="description">Description</p>
     <div class="input-container">
-      <router-link to="" class="profil-input">My Profil</router-link>
+      <router-link to="/my-profil" class="profil-input">My Profil</router-link>
       <router-link to="/my-offers" class="offer-input">My Offers</router-link>
     </div>
   </div>
+  <span class="vertical-line"></span>
 </template>
 
 <script>

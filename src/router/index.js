@@ -24,7 +24,13 @@ const routes = [
     path: '/offers',
     name: 'Offers',
     component: () => import('../views/Offers.vue')
+  },
+  {
+    path: '/my-profil',
+    name: 'MyProfil',
+    component: () => import('../views/MyProfil.vue')
   }
+  
 ]
 
 const router = createRouter({
