@@ -1,8 +1,8 @@
 <template>
-  <div class="profil-container">
+  <div class="myprofil-container">
     <div class="profil">
       <img src="../assets/images/img.jpg" alt="" />
-      <div>
+      <div class="name-container">
         <p v-if="$store.state.user">{{ $store.state.user.first_name }}</p>
         <p v-if="$store.state.user">{{ $store.state.user.last_name }}</p>
       </div>
@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/profil.scss";
+  @import "../assets/style/profil.scss";
 </style>

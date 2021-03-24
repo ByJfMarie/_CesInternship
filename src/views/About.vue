@@ -7,16 +7,14 @@
 </template>
 
 <script>
-import Profil from "@/components/Profil.vue";
 import NavBar from "@/components/NavBar.vue";
-import SearchOffers from "@/components/SearchOffers.vue";
+import MyProfilForm from "@/components/MyProfilForm.vue";
 
 export default {
   name: "About",
   components: {
-    Profil,
     NavBar,
-    SearchOffers,
+    MyProfilForm
   },
 };
 </script>
