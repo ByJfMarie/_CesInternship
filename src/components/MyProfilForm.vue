@@ -24,13 +24,27 @@
     <span>Role</span>
     <br />
     <br />
-    <p>Student</p>
+    <template v-if="student">
+      <p>Student</p>
+    </template>
+    <div v-if="admin">
+      <select class="role" name="role" id="role" v-on:change="select()">
+        <option value="Student">Student</option>
+        <option value="Admin">Admin</option>
+        <option value="Pilot">Pilot</option>
+        <option value="Delegate">Delegate Administration</option>
+        <option value="NewDelegate">New Delegate</option>
+      </select>
+    </div>
     <br />
     <br />
     <br />
     <form action="" method="post" @submit.prevent="handleLogout">
       <input type="submit" class="disconnect" value="Disconnect" />
     </form>
+    <div v-if="admin">
+      <input type="button" class="delete" value="Delete" />
+    </div>
   </div>
 </template>
 
@@ -38,6 +52,13 @@
 import axios from "axios";
 export default {
   name: "MyProfilForm",
+  data(){
+    return {
+      admin: true,
+      student: false,
+      selected: "selected",
+    }
+  },
   methods: {
     async handleLogout() {
       try {
@@ -49,6 +70,11 @@ export default {
         this.errors = error.response.data.errors;
       }
     },
+    select: function(){
+      if(document.getElementById('role').value == "NewDelegate") {
+          window.location.href = '/new-delegate'; 
+      }
+    }
   },
 };
 </script>
