@@ -54,8 +54,8 @@ export default {
   name: "MyProfilForm",
   data(){
     return {
-      admin: true,
-      student: false,
+      admin: false,
+      student: true,
       selected: "selected",
     }
   },

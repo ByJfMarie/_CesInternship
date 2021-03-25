@@ -34,7 +34,13 @@ const routes = [
     path: '/new-delegate',
     name: 'NewDelegate',
     component: () => import('../views/NewDelegate.vue')
+  },
+  {
+    path: '/accounts',
+    name: 'Accounts',
+    component: () => import('../views/Accounts.vue')
   }
+  
   
 ]
 
