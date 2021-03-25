@@ -1,12 +1,15 @@
 <template>
   <div class="myoffer-container">
-        <span><a href="">Offer's Name - Company</a></span>
+        <span><a href="">{{data.name}} - Company</a></span>
     </div>
 </template>
 
 <script>
 export default {
-    name: "SearchOfferCard"
+    name: "SearchOfferCard",
+    props: {
+        data: Object,
+    }
 }
 </script>
 

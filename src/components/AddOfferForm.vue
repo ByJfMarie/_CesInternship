@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: 'AddOfferForm',
     data() {
@@ -48,7 +49,7 @@ export default {
             salary: 0,
             date: '',
             places_offer: 0,
-            details: ''
+            details: '',
         }
     },
     methods: {
@@ -59,7 +60,7 @@ export default {
         deleteSkill(id) {
             var a = this.skills.splice(id, 1)
         },
-        createForm() {
+        async createForm() {
             var newOffer = new Object();
             newOffer.name = this.namef;
             newOffer.duration = this.duration;
@@ -82,6 +83,23 @@ export default {
             this.details = '';
 
             console.log(newOffer);
+            
+            try {
+                // await axios.get("/sanctum/csrf-cookie");
+                await axios.post("/api/offers", newOffer);
+
+                // let response = await axios.get("/api/user");
+
+                // this.$store.commit("setAuth", response.data);
+
+                // console.log(this.$store.state.user);
+
+                // this.$router.push("about");
+            } catch (error) {
+                this.errors = error.response.data.errors;
+            }
+            
+    
         }
     }
 }
