@@ -1,0 +1,86 @@
+@import 'app.scss';
+
+.addOfferForm-container {
+
+    max-width: 500px;
+    text-align: left;
+    background-color: lightgray;
+
+    .form-group {
+
+        margin-top: 20px;
+
+        label {
+
+            font-size: 17px;
+        }
+
+        input, textarea {
+
+            font-size: 17px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 3px;
+            padding-right: 3px;
+            margin-top: 5px;
+        }
+
+        .addSkill {
+
+            margin-left: 10px;
+        }
+        ul {
+
+            list-style-type: none;
+            padding-top: 10px;
+
+            li {
+
+                display: inline-block;
+                background-color: $green;
+                color: white;
+                margin-left: 20px;
+                font-size: 17px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-top: 5px;
+                border-radius: 2px;
+                transition-duration: 100ms;
+
+                &:hover {
+
+                    background-color: $red;
+                    transition-duration: 100ms;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    a {
+
+        text-decoration: none;
+        color: white;
+        background-color: $blue-light;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 17px;
+        border-radius: 2px;
+        transition-duration: 100ms;
+
+        &:hover {
+
+            filter: brightness(108%);
+            transition-duration: 100ms;
+        }
+    }
+
+    .createBtn {
+
+        font-size: 22px;
+    }
+}

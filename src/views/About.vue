@@ -1,20 +1,20 @@
 <template>
   <div class="about">
     <NavBar />
-    <MyAccountDisplay />
-    <Profil />
+    <AddOfferForm />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import MyProfilForm from "@/components/MyProfilForm.vue";
+import AddOfferForm from "@/components/AddOfferForm.vue";
 
 export default {
   name: "About",
   components: {
     NavBar,
-    MyProfilForm
+    AddOfferForm,
+    
   },
 };
 </script>

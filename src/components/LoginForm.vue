@@ -36,6 +36,7 @@ export default {
   methods: {
     async handleLogin() {
       try {
+        console.log(this.form);
         await axios.get("/sanctum/csrf-cookie");
         await axios.post("/login", this.form);
 
