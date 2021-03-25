@@ -4,6 +4,7 @@
       <h1 class="nav-logo">CesInternship</h1>
       <router-link to="/" class="navLink">Accueil</router-link>
       <router-link to="/offers" class="navLink">Offres</router-link>
+      <router-link v-if="admin" to="/accounts" class="navLink">Accounts</router-link>
       <div class="navProfil">
         <router-link to="my-profil" class="profilLink">My Profil</router-link>
         <img src="https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg" alt="">
@@ -18,6 +19,11 @@
 <script>
 export default {
     name: "NavBar",
+    data(){
+      return{
+        admin: false,
+      }
+    },
     methods: {
     responsive: function () {
       console.log("Ouverture");
