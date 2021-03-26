@@ -48,7 +48,8 @@ const routes = [
   },
   {
     path: '/offer',
-    name: 'Accounts',
+    name: 'offer',
+    props: true,
     component: () => import('../views/Offer.vue')
   }
   
