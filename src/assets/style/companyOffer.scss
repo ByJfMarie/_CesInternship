@@ -1,0 +1,50 @@
+@import "app.scss";
+
+
+.company-container {
+    margin:30px;
+
+    .gauche {
+        float:left;
+        position: relative;
+
+        img {
+            width: 300px;
+        }
+    
+        .details {
+            background-color: #E8E8E8;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .description {
+        float:left;
+        position: relative;
+        margin-left:40px;
+        text-align: left;
+
+        .name {
+            color:$green;
+        }
+
+        .left{
+            background-color: #E8E8E8;
+            width: 1000px;
+            height: 465px;
+            padding: 20px;
+            margin-top: 20px;
+
+            p {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
