@@ -17,9 +17,9 @@
             <option value="Digital">Digital</option>
         </select>
         <br>
-        <span>Number of places for Student</span>
+        <span>Number of Student</span>
         <br>
-        <input type="number" placeholder="Number of places">
+        <input type="number" placeholder="Number of student">
         <br>
         <span>Tutor Confidence</span>
         <br>
