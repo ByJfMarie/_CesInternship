@@ -11,7 +11,7 @@
                 <h1>Description</h1>
                 <p>{{ data.description }}</p>
             </div>
-            <input type="button" value="See More">
+            <input type="button" value="See More" @click="offer()">
         </div>
     </div>
 </template>
@@ -21,6 +21,11 @@ export default {
     name: 'OfferCard',
     props: {
         data: Object,
+    },
+    methods:{
+        offer: function(){
+             window.location.href = '/offer';
+        }
     }
 }
 </script>

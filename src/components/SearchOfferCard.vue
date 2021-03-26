@@ -1,6 +1,6 @@
 <template>
   <div class="myoffer-container">
-        <span><a href="">{{data.name}} - Company</a></span>
+        <span><a href="/offer">{{data.name}} - Company</a></span>
     </div>
 </template>
 
