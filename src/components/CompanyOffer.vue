@@ -1,28 +1,28 @@
 <template>
-  <div class="company-container">
+  <div v-if="offerData" class="company-container">
       <div class="gauche">
       <img src="https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg" alt="">
       <div class="details">
           <span>City</span>
           <br>
-          <p>Rouen</p>
+          <p>{{cityData.City_Name}}</p>
           <br>
           <span>Phone</span>
           <br>
-          <p>07 84 56 78 98</p>
+          <p>{{companyData.Company_Phone}}</p>
           <br>
           <span>Email</span>
           <br>
-          <p>example@gmail.com</p>
+          <p>{{companyData.Company_Email}}</p>
           <br>
           <span>Web Site</span>
           <br>
-          <p>example.com</p>
+          <p>{{companyData.Company_Website}}</p>
       </div>
       </div>
       <div class="description">
           <div class="name">
-          <h2 v-if="offerData"> {{offerData.name}} - Company </h2>
+          <h2 v-if="offerData"> {{offerData.name}} - {{companyData.Company_Name}} </h2>
           </div>
           <div class="left">
           <span>Presentation of the Company</span>
@@ -47,7 +47,9 @@ export default {
     name: "CompanyOffer",
     data() {
         return {
-            offerData: null
+            offerData: null,
+            companyData: null,
+            cityData: null,
         }
     },
     props: {
@@ -60,8 +62,34 @@ export default {
       // JSON responses are automatically parsed.
         console.log(response.data);
         this.offerData = response.data;
-      })
+
+        if (this.offerData) {
+            
+            axios
+            .get('http://cesinternships.test:800/api/companies/' + this.offerData.ID_Company)
+            .then(response => {
+                // JSON responses are automatically parsed.
+            console.log(response.data);
+            this.companyData = response.data;
+            
+            if (this.companyData) {
+            
+            axios
+            .get('http://cesinternships.test:800/api/cities/' + this.companyData.ID_City)
+            .then(response => {
+                // JSON responses are automatically parsed.
+            console.log(response.data);
+            this.cityData = response.data;
+            
+            })
+        }
+            
+            })
+        }
+        })
+
     },
+      
 }
 </script>
 
