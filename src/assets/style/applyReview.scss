@@ -43,7 +43,8 @@
 
         }
 
-        input[type="text"]{
+        input[type="file"]{
+            display:none;
             padding: 5px;
             width: 200px;
             margin-bottom: 40px;
@@ -55,6 +56,20 @@
 
         }
 
+        label {
+            padding: 5px;
+            width: 200px;
+            margin-bottom: 40px;
+            margin-top: 10px;
+            border: 1px solid lightgrey;
+            border-radius: 2px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: lightgrey;
+            }
+        }
+
         .save{
             border: 2px solid lightgrey;
             width: 200px;
@@ -62,8 +77,13 @@
             padding:5px;
         }
 
-        label {
+        .myoffers {
             margin-left: 10px;
+            border: none;
+
+            &:hover{
+                background-color: white;
+            }
         }
 
         #submit{
