@@ -1,6 +1,6 @@
 <template>
     <div class="myoffer-container">
-        <span><a @click="offer()">{{data.name}} - Company</a></span>
+        <span><a @click="offer()">{{data.name}} - {{cdata.Company_Name}} </a></span>
     </div>
 </template>
 
@@ -10,6 +10,7 @@ export default {
     name: "SearchOfferCard",
     props: {
         data: Object,
+        cdata: Object
     },
     methods:{
         offer: function(){
@@ -17,7 +18,7 @@ export default {
                  id: this.data.id
              }});
         }
-    }
+    },
 }
 </script>
 
