@@ -38,11 +38,12 @@ export default {
   methods: {
     getFilters: function(filters) {
       this.filterList = filters;
+      console.log(filters);
     }
   },
   mounted(){
     axios
-      .get('http://cesinternship.test/api/offers')
+      .get('http://cesinternships.test:800/api/offers')
       .then(response => {
       // JSON responses are automatically parsed.
         console.log(response.data);
