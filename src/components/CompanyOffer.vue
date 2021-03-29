@@ -22,7 +22,7 @@
       </div>
       <div class="description">
           <div class="name">
-          <h2> Name of the Company </h2>
+          <h2 v-if="offerData"> {{offerData.name}} - Company </h2>
           </div>
           <div class="left">
           <span>Presentation of the Company</span>
@@ -30,9 +30,11 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <span>Offer of internship</span>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p v-if="offerData">{{offerData.details}}</p>
           <span>Skills require</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           <ul>
+            <li v-if="offerData" v-for="skills in offerData.competences">{{skills}}</li>
+            </ul>
           </div>
       </div>
       <br>
@@ -40,8 +42,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    name: "CompanyOffer"
+    name: "CompanyOffer",
+    data() {
+        return {
+            offerData: null
+        }
+    },
+    props: {
+        id: String,
+    },
+    created() {
+        axios
+      .get('http://cesinternships.test:800/api/offers/' + this.id)
+      .then(response => {
+      // JSON responses are automatically parsed.
+        console.log(response.data);
+        this.offerData = response.data;
+      })
+    },
 }
 </script>
 

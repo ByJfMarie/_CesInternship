@@ -14,7 +14,7 @@ export default {
     methods:{
         offer: function(){
              router.push({name: 'offer', params: {
-                 items: this.data.id
+                 id: this.data.id
              }});
         }
     }

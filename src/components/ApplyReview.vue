@@ -8,17 +8,21 @@
           <br>
           <span>Choose a CV to send</span>
           <br>
-          <input type="button" value="Import">
-          <input type="text">
+          <br>
+          <label for="cv">Select a file...</label>
+          <input type="file" id="cv" value="Import">
+          <br>
           <br>
           <span>Add a Motivation Letter</span>
           <br>
-          <input type="button" value="Import">
-          <input type="text">
+          <br>
+          <label for="ml">Select a file...</label>
+          <input type="file" id="ml" value="Import">
+          <br>
           <br>
           <div class="save">
           <input type="checkbox">
-          <label for="checkbox">Save in My Offers</label>
+          <label for="checkbox" class="myoffers">Save in My Offers</label>
           </div>
           <input id="submit" type="button" value="Submit">
       </div>
