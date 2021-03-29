@@ -17,7 +17,7 @@
       </div>
     </div>
     <hr />
-    <h1>See all the offers >></h1>
+    <h1><a href='/offers'>See all the offers >></a></h1>
     <div class="bottom-banner">
       <div v-for="data in cardData">
         <OfferCard :data="data" />

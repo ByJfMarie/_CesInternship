@@ -21,7 +21,7 @@ export default {
     name: "NavBar",
     data(){
       return{
-        admin: false,
+        admin: true,
       }
     },
     methods: {
