@@ -81,8 +81,6 @@ export default {
             this.date = '';
             this.places_offer = 0;
             this.details = '';
-
-            console.log(newOffer);
             
             try {
                 // await axios.get("/sanctum/csrf-cookie");
