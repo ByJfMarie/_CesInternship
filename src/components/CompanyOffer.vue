@@ -33,7 +33,7 @@
           <p v-if="offerData">{{offerData.details}}</p>
           <span>Skills require</span>
            <ul>
-            <li v-for="skills in offerData.competences">{{skills}}</li>
+            <li v-if="offerData" v-for="skills in offerData.competences">{{skills}}</li>
             </ul>
           </div>
       </div>
