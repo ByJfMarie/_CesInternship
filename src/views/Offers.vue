@@ -1,7 +1,7 @@
 <template>
   <div class="offer">
     <NavBar />
-    <SearchOffers />
+    <SearchOffers @inputFilter="getFilters" />
     <div class="offercard" v-for="offer in offersData">
       <SearchOfferCard :data="offer" />
     </div>
@@ -26,11 +26,17 @@ export default {
   data() {
     return {
       offersData: null,
+      filterList: new Object,
     };
+  },
+  methods: {
+    getFilters: function(filters) {
+      this.filterList = filters;
+    }
   },
   mounted(){
     axios
-      .get('http://cesinternships.test:800/api/offers')
+      .get('http://cesinternship.test/api/offers')
       .then(response => {
       // JSON responses are automatically parsed.
         console.log(response.data);
