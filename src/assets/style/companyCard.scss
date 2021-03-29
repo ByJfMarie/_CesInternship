@@ -1,0 +1,31 @@
+@import 'app.scss';
+
+.company-container {
+    display: flex;
+    max-width: 600px;
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+
+    span {
+
+        a {
+
+            text-decoration: none;
+            color: grey;
+
+            &:hover {
+
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+
+    input {
+
+        justify-self: flex-end;
+    }
+}
