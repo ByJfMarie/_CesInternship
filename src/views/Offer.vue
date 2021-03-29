@@ -1,7 +1,7 @@
 <template>
   <div>
       <NavBar />
-      <CompanyOffer />
+      <CompanyOffer :id = "id" />
       <ApplyReview />
   </div>
 </template>
@@ -14,11 +14,19 @@ import ApplyReview from "../components/ApplyReview.vue";
 
 export default {
     name: "Offer",
+    data() {
+        return {
+            id: null
+        }
+    },
     components:{
         NavBar,
         CompanyOffer,
         ApplyReview
-    }
+    },
+    created() {
+        this.id = this.$route.params.id;
+    },
 }
 </script>
 

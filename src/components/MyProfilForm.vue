@@ -10,7 +10,7 @@
     <span>Center</span>
     <br />
     <br />
-    <p>Rouen - Normandie</p>
+    <p v-if="$store.state.user">{{ $store.state.user.Center}}</p>
     <br />
     <br />
     <br />
@@ -24,10 +24,10 @@
     <span>Role</span>
     <br />
     <br />
-    <template v-if="student">
+    <template v-if="$store.state.user.ID_Role == 1">
       <p>Student</p>
     </template>
-    <div v-if="admin">
+    <div v-if="$store.state.user.ID_Role == 4">
       <select class="role" name="role" id="role" v-on:change="select()">
         <option value="Student">Student</option>
         <option value="Admin">Admin</option>
