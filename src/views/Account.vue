@@ -3,10 +3,10 @@
         <NavBar />
 
         <div class="profil-container">
-            <AccountProfil />
+            <AccountProfil :id="id" />
             <div class="line"></div>
             <div class="myprofil-container">
-                <AccountForm />
+                <AccountForm :id="id" />
             </div>
         </div>
     </div>
@@ -20,11 +20,21 @@ import AccountForm from '@/components/AccountForm.vue'
 
 export default {
     name: 'Account',
+    data() {
+        return {
+            id: null
+        }
+    },
     components: {
         NavBar,
         AccountProfil,
         AccountForm
-    }
+    },
+    created() {
+        this.id = this.$route.params.id;
+
+    },
+    
 }
 </script>
 

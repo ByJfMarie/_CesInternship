@@ -58,7 +58,7 @@ export default {
     },
     created() {
         axios
-      .get('http://cesinternship.test/api/offers/' + this.id)
+      .get('http://cesinternships.test:800/api/offers/' + this.id)
       .then(response => {
       // JSON responses are automatically parsed.
         console.log(response.data);
@@ -67,7 +67,7 @@ export default {
         if (this.offerData) {
             
             axios
-            .get('http://cesinternship.test/api/companies/' + this.offerData.ID_Company)
+            .get('http://cesinternships.test:800/api/companies/' + this.offerData.ID_Company)
             .then(response => {
                 // JSON responses are automatically parsed.
             console.log(response.data);
@@ -76,7 +76,7 @@ export default {
             if (this.companyData) {
             
             axios
-            .get('http://cesinternship.test/api/cities/' + this.companyData.ID_City)
+            .get('http://cesinternships.test:800/api/cities/' + this.companyData.ID_City)
             .then(response => {
                 // JSON responses are automatically parsed.
             console.log(response.data);

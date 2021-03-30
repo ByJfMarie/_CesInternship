@@ -43,7 +43,6 @@ export default {
   methods: {
     async handleLogin() {
       try {
-        console.log(this.form);
         await axios.get("/sanctum/csrf-cookie");
         await axios.post("/login", this.form);
 
@@ -51,7 +50,6 @@ export default {
 
         this.$store.commit("setAuth", response.data);
 
-        console.log(this.$store.state.user);
 
         this.$router.push("about");
       } catch (error) {

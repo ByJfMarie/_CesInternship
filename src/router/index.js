@@ -32,8 +32,9 @@ const routes = [
     component: () => import('../views/MyProfil.vue')
   },
   {
-    path: '/account',
+    path: '/account/:id',
     name: 'Account',
+    props: true,
     component: () => import('../views/Account.vue')
   },
   {
