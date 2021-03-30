@@ -1,15 +1,24 @@
 <template>
-  <div class="offer">
+  <div>
     <NavBar />
-    <SearchOffers @inputFilter="getFilters" />
-    <div class="offercard" v-for="offer in offersData" v-if="companyData">
-      <div class="testCompany" v-for="company in companyData">
-        <div class="testId" v-if="company.id == offer.ID_Company && company.Invisibility == 0">
 
-          <SearchOfferCard :data="offer" :cdata="company" />
+    <div class="offerpage-container">
+      <SearchOffers @inputFilter="getFilters" />
+
+      <div class="offers-container">
+        <div v-for="offer in offersData" v-if="companyData">
+          <div v-for="company in companyData">
+            <div v-if="company.id == offer.ID_Company">
+
+              <SearchOfferCard :data="offer" :cdata="company" />
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
+    
+    
     
   </div>
 </template>
@@ -38,19 +47,42 @@ export default {
   methods: {
     getFilters: function(filters) {
       this.filterList = filters;
-      console.log(filters);
+      var query = 'http://cesinternship.test/api/offers?';
+      if (this.filterList.name != '') {
+        query += ('name=%'+this.filterList.name+'%&');
+      }
+      if (this.filterList.duration != '') {
+        query += ('duration='+this.filterList.duration+'&');
+      }
+      if (this.filterList.skill != '') {
+        query += ('competences=%'+this.filterList.skill+'%&');
+      }
+      if (this.filterList.salary != '') {
+        query += ('salary='+this.filterList.salary+'&');
+      }
+      if (this.filterList.date != '') {
+        query += ('date='+this.filterList.date+'&');
+      }
+      console.log(query);
+      axios
+        .get(query)
+        .then(response => {
+        // JSON responses are automatically parsed.
+          console.log(response.data);
+          this.offersData = response.data;
+        })
     }
   },
   mounted(){
     axios
-      .get('http://cesinternships.test:800/api/offers')
+      .get('http://cesinternship.test/api/offers')
       .then(response => {
       // JSON responses are automatically parsed.
         console.log(response.data);
         this.offersData = response.data;
       })
      axios
-      .get('http://cesinternships.test:800/api/companies')
+      .get('http://cesinternship.test/api/companies')
       .then(response => {
       // JSON responses are automatically parsed.
         console.log(response.data);
@@ -62,5 +94,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+  @import '../assets/style/offers.scss';
 </style>
