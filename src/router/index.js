@@ -32,11 +32,14 @@ const routes = [
     component: () => import('../views/MyProfil.vue')
   },
   {
+<<<<<<< HEAD
+=======
     path: '/account',
     name: 'Account',
     component: () => import('../views/Account.vue')
   },
   {
+>>>>>>> main
     path: '/offers',
     name: 'Offers',
     component: () => import('../views/Offers.vue')
