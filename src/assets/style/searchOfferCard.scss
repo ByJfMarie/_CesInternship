@@ -9,6 +9,10 @@
     border-radius: 3px;
     margin-bottom: 15px;
 
+    &:hover {
+        scale: 1.02;
+    }
+
     span {
 
         a {
@@ -19,6 +23,7 @@
             &:hover {
 
                 color: black;
+                cursor: pointer;
             }
         }
     }

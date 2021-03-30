@@ -42,7 +42,6 @@
        <br>
        <input type="button" value="Send">
        </div>
-       <input class="delete" type="button" value="Delete Offer">
   </div>
 </template>
 

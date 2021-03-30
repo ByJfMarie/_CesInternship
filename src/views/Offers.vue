@@ -4,7 +4,7 @@
     <SearchOffers @inputFilter="getFilters" />
     <div class="offercard" v-for="offer in offersData" v-if="companyData">
       <div class="testCompany" v-for="company in companyData">
-        <div class="testId" v-if="company.id == offer.ID_Company">
+        <div class="testId" v-if="company.id == offer.ID_Company && company.Invisibility == 0">
 
           <SearchOfferCard :data="offer" :cdata="company" />
         </div>
