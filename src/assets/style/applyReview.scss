@@ -122,4 +122,52 @@
         }
     }
     
+    .comment-container{
+        margin-left: 30px;
+
+        textarea {
+            float:left;
+            resize: none;
+            font-size: 16px;
+            background-color: white;
+            border: 1px solid grey;
+            width: 500px;
+            height: 100px;
+            margin-bottom: 40px;
+        }
+
+        input[type="number"]{
+            float:left;
+            margin-left: 20px;
+            float:left;
+            color: black;
+            background-color: white;
+            border: 1px grey solid;
+            padding:5px;
+        }
+
+        label {
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        input[type="button"]{
+            float:left;
+            color: white;
+            background-color: $blue-light;
+            border:none;
+            border-radius: 2px;
+            padding: 5px;
+            width: 100px;
+            margin-top:40px;
+
+            &:hover{
+                cursor: pointer;
+                background-color: $blue_dark;
+            }
+        }
+    }
+
+    
 }

@@ -27,6 +27,15 @@
     <template v-if="$store.state.user.ID_Role == 1">
       <p>Student</p>
     </template>
+    <div v-if="$store.state.user.ID_Role == 4">
+      <select class="role" name="role" id="role" v-on:change="select()">
+        <option value="Student">Student</option>
+        <option value="Admin">Admin</option>
+        <option value="Pilot">Pilot</option>
+        <option value="Delegate">Delegate Administration</option>
+        <option value="NewDelegate">New Delegate</option>
+      </select>
+    </div>
     <br />
     <br />
     <br />
@@ -42,7 +51,13 @@
 <script>
 import axios from "axios";
 export default {
-  name: "MyProfilForm",
+  name: "AccountForm",
+  data(){
+    return {
+      admin: false,
+      student: true,
+    }
+  },
   methods: {
     async handleLogout() {
       try {
@@ -54,6 +69,11 @@ export default {
         this.errors = error.response.data.errors;
       }
     },
+    select: function(){
+      if(document.getElementById('role').value == "NewDelegate") {
+          window.location.href = '/new-delegate'; 
+      }
+    }
   },
 };
 </script>

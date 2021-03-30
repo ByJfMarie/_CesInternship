@@ -34,6 +34,14 @@
            <Review />
            </div>
        </div>
+       <div class="comment-container">
+       <textarea placeholder="Comment..." required wrap="hard"></textarea>
+       <label for="number">Note</label>
+       <input type="number" id="number" min="0" max="5" step="0.5">
+       <br>
+       <br>
+       <input type="button" value="Send">
+       </div>
   </div>
 </template>
 

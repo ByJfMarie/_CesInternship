@@ -38,6 +38,7 @@
           </div>
       </div>
       <br>
+      <input class="delete" v-if="$store.state.user.ID_Role == 4" type="button" @click="deleteOffer()" value="Delete Offer">
   </div>
 </template>
 
@@ -88,6 +89,21 @@ export default {
         }
         })
 
+    },
+    methods: {
+        async deleteOffer() {
+            try {
+              console.log(this.form);
+              await axios.get("/sanctum/csrf-cookie");
+              await axios.delete("/api/offers/" + this.offerData.id);
+
+              console.log('Supp');
+
+              this.$router.push("../offers");
+            } catch (error) {
+              this.errors = error.response.data.errors;
+            }
+    },
     },
       
 }

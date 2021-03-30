@@ -58,4 +58,17 @@
             list-style: none;
         }
     }
+    .delete{
+        position: relative;
+        float:right;
+        background-color: crimson;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        padding:5px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }
