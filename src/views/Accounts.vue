@@ -3,12 +3,16 @@
       <NavBar />
       <div class="accountspage-container">
         <SearchAccounts @inputFilter="getFilters"/>
-        <div v-for="users in usersData" v-if="rolesData" class="accounts-container">
+        
+        <div  class="accounts-container">
+
+        <div v-for="users in usersData" v-if="rolesData">
             <div v-for="roles in rolesData">
                 <div v-if="roles.id == users.ID_Role">
                     <SearchAccountCard :user="users" :role="roles"/>
                 </div>
             </div>
+        </div>
         </div>
       </div>
   </div>

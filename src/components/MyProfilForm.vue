@@ -24,9 +24,9 @@
     <span>Role</span>
     <br />
     <br />
-    <template v-if="$store.state.user.ID_Role == 1">
-      <p>Student</p>
-    </template>
+    <p v-if="$store.state.user.ID_Role == 1">Student</p>
+    <p v-if="$store.state.user.ID_Role == 2">Delegate</p>
+    <p v-if="$store.state.user.ID_Role == 3">Pilot</p>
     <br />
     <br />
     <br />

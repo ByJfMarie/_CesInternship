@@ -2,7 +2,7 @@
   <div>
       <NavBar />
       <CompanyOffer :id = "id" />
-      <ApplyReview />
+      <ApplyReview :id ="id" />
   </div>
 </template>
 

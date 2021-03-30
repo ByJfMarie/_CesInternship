@@ -20,11 +20,7 @@
           <input type="file" id="ml" value="Import">
           <br>
           <br>
-          <div class="save">
-          <input type="checkbox">
-          <label for="checkbox" class="myoffers">Save in My Offers</label>
-          </div>
-          <input id="submit" type="button" value="Submit">
+          <input id="submit" @click="createApply()" type="button" value="Save in my Offers and Apply">
       </div>
       <br>
       <div class="review-container">
@@ -47,11 +43,47 @@
 
 <script>
 import Review from "../components/Review.vue"
+import axios from 'axios'
 export default {
     name: "ApplyReview",
+    props:{
+      id: null
+    },
+    data() {
+      return {
+        errors: null
+      }
+    },
     components:{
         Review
-    }
+    },
+    methods: {
+      async createApply(){
+        var newApply = new Object();
+        newApply.Step = 1;
+        newApply.ID_Student = this.$store.state.user.id;
+        newApply.ID_Offer = parseInt(this.id, 10);
+
+        console.log(newApply);
+
+
+         try {
+                 // await axios.get("/sanctum/csrf-cookie");
+                 await axios.post("/api/nominations", newApply);
+
+                //  let response = await axios.get("/api/nominations");
+
+                 // this.$store.commit("setAuth", response.data);
+
+                 // console.log(this.$store.state.user);
+
+                this.$router.push("../my-offers");
+            } catch (error) {
+                this.errors = error.response.data.errors;
+                console.log(this.errors);
+            }
+      }
+    },
 }
 </script>
 
