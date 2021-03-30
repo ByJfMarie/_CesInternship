@@ -83,16 +83,8 @@ export default {
             this.details = '';
             
             try {
-                // await axios.get("/sanctum/csrf-cookie");
                 await axios.post("/api/offers", newOffer);
 
-                // let response = await axios.get("/api/user");
-
-                // this.$store.commit("setAuth", response.data);
-
-                // console.log(this.$store.state.user);
-
-                // this.$router.push("about");
             } catch (error) {
                 this.errors = error.response.data.errors;
             }

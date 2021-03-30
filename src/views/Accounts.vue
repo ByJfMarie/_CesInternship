@@ -45,13 +45,13 @@ export default {
         query += ('name=%'+this.filterList.name+'%&');
       }
       if (this.filterList.role != '') {
-        query += ('role='+this.filterList.duration+'&');
+        query += ('role='+this.filterList.role+'&');
       }
       axios
         .get(query)
         .then(response => {
         // JSON responses are automatically parsed.
-          this.offersData = response.data;
+          this.userData = response.data;
         })
     }
   },

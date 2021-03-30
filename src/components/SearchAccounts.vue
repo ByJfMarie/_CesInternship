@@ -28,7 +28,7 @@ export default {
     },
     methods: {
 
-        submin() {
+        submit() {
 
             var filterList = new Object;
             filterList.name = this.namef;
@@ -39,10 +39,10 @@ export default {
     watch: {
 
         namef: function() {
-            this.submin;
+            this.submit();
         },
         role: function() {
-            this.submin;
+            this.submit();
         }
     }
 }
