@@ -1,7 +1,10 @@
 <template>
   <div class="nav" id="nav">
     <div class="nav-label" id="nav-label">
+      <div class="logo">
+      <img src="../assets/images/CesIntershipIcon.png">
       <h1 class="nav-logo">CesInternship</h1>
+      </div>
       <router-link to="/home" class="navLink">Home</router-link>
       <router-link to="/offers" class="navLink">Offers</router-link>
       <router-link v-if="admin" to="/accounts" class="navLink">Accounts</router-link>
