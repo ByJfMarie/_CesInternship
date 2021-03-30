@@ -63,12 +63,10 @@ export default {
       if (this.filterList.date != '') {
         query += ('date='+this.filterList.date+'&');
       }
-      console.log(query);
       axios
         .get(query)
         .then(response => {
         // JSON responses are automatically parsed.
-          console.log(response.data);
           this.offersData = response.data;
         })
     }
@@ -78,14 +76,12 @@ export default {
       .get('http://cesinternship.test/api/offers')
       .then(response => {
       // JSON responses are automatically parsed.
-        console.log(response.data);
         this.offersData = response.data;
       })
      axios
       .get('http://cesinternship.test/api/companies')
       .then(response => {
       // JSON responses are automatically parsed.
-        console.log(response.data);
         this.companyData = response.data;
       })
     
