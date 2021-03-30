@@ -38,7 +38,7 @@ export default {
     methods: {
     getFilters: function(filters) {
       this.filterList = filters;
-      var query = 'http://cesinternships.test:800/api/users?';
+      var query = 'http://cesinternship.test/api/users?';
       if (this.filterList.name != '') {
         query += ('name=%'+this.filterList.name+'%&');
       }
@@ -55,13 +55,13 @@ export default {
   },
   mounted(){
     axios
-      .get('http://cesinternships.test:800/api/users')
+      .get('http://cesinternship.test/api/users')
       .then(response => {
       // JSON responses are automatically parsed.
         this.usersData = response.data;
       })
      axios
-      .get('http://cesinternships.test:800/api/roles')
+      .get('http://cesinternship.test/api/roles')
       .then(response => {
       // JSON responses are automatically parsed.
         this.rolesData = response.data;

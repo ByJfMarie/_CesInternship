@@ -32,7 +32,12 @@
         <label for="details">Details</label><br>
         <textarea name="details" v-model="details"></textarea>
     </div><br>
-    <a href="#" @click="createForm" class="createBtn">Create Offer</a>
+    <div v-if="data">
+        <a href="#" @click="modifyOffer" class="createBtn">Modify Offer</a>
+    </div>
+    <div v-else>
+        <a href="#" @click="createOffer" class="createBtn">Create Offer</a>
+    </div>
   </div>
 </template>
 
@@ -40,6 +45,9 @@
 import axios from "axios";
 export default {
     name: 'AddOfferForm',
+    props: {
+        data: Object,
+    },
     data() {
         return {
             namef: '',
@@ -52,6 +60,13 @@ export default {
             details: '',
         }
     },
+    created() {
+
+        if(this.data) {
+
+            this.getData();
+        }
+    },
     methods: {
         appendSkill() {
             this.skills.push(this.newSkill);
@@ -60,7 +75,16 @@ export default {
         deleteSkill(id) {
             var a = this.skills.splice(id, 1)
         },
-        async createForm() {
+        getData() {
+            this.namef = this.data.name;
+            this.duration = this.data.duration;
+            this.skills = this.data.competences;
+            this.salary = this.data.salary;
+            this.date = this.data.date;
+            this.places_offer = this.data.places_offer;
+            this.details = this.data.details;
+        },
+        createForm() {
             var newOffer = new Object();
             newOffer.name = this.namef;
             newOffer.duration = this.duration;
@@ -81,15 +105,28 @@ export default {
             this.date = '';
             this.places_offer = 0;
             this.details = '';
-            
+
+            return newOffer;
+        },
+        async createOffer() {
+
+            var newOffer = this.createForm();
             try {
                 await axios.post("/api/offers", newOffer);
 
             } catch (error) {
                 this.errors = error.response.data.errors;
             }
+        },
+        async ModifyOffer() {
             
-    
+            var newOffer = this.createForm();
+            try {
+                await axios.update("/api/offers", newOffer);
+
+            } catch (error) {
+                this.errors = error.response.data.errors;
+            }
         }
     }
 }
