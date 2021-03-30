@@ -3,15 +3,12 @@
       <NavBar />
       <div class="accountspage-container">
         <SearchAccounts @inputFilter="getFilters"/>
-        <div class="accounts-container">
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
-            <SearchAccountCard />
+        <div v-for="users in usersData" v-if="rolesData" class="accounts-container">
+            <div v-for="roles in rolesData">
+                <div v-if="roles.id == users.ID_Role">
+                    <SearchAccountCard :user="users" :role="roles"/>
+                </div>
+            </div>
         </div>
       </div>
   </div>
@@ -34,27 +31,44 @@ export default {
     data() {
         return {
             filterList: new Object,
-            userData: null
+            usersData: null,
+            rolesData: null
         }
     },
     methods: {
     getFilters: function(filters) {
       this.filterList = filters;
-      var query = 'http://cesinternship.test/api/users?';
+      var query = 'http://cesinternships.test:800/api/users?';
       if (this.filterList.name != '') {
         query += ('name=%'+this.filterList.name+'%&');
       }
       if (this.filterList.role != '') {
-        query += ('role='+this.filterList.duration+'&');
+        query += ('role='+this.filterList.role+'&');
       }
       axios
         .get(query)
         .then(response => {
         // JSON responses are automatically parsed.
-          this.offersData = response.data;
+          this.usersData = response.data;
         })
     }
   },
+  mounted(){
+    axios
+      .get('http://cesinternships.test:800/api/users')
+      .then(response => {
+      // JSON responses are automatically parsed.
+        this.usersData = response.data;
+      })
+     axios
+      .get('http://cesinternships.test:800/api/roles')
+      .then(response => {
+      // JSON responses are automatically parsed.
+        this.rolesData = response.data;
+      })
+    
+
+  }
 }
 </script>
 

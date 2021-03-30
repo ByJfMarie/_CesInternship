@@ -11,7 +11,7 @@
             <option value="1">Student</option>
             <option value="2">Delegate</option>
             <option value="3">Pilot</option>
-            <option value="4">Student</option>
+            <option value="4">Admin</option>
         </select>
     </div>
   </div>
@@ -28,7 +28,8 @@ export default {
     },
     methods: {
 
-        submin() {
+        submit() {
+
 
             var filterList = new Object;
             filterList.name = this.namef;
@@ -39,10 +40,10 @@ export default {
     watch: {
 
         namef: function() {
-            this.submin;
+            this.submit();
         },
         role: function() {
-            this.submin;
+            this.submit();
         }
     }
 }
