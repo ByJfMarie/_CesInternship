@@ -9,7 +9,7 @@
     </div>
     <p class="description">Description</p>
     <div class="input-container">
-      <router-link to="/their-profil" class="profil-input">Their Profil</router-link>
+      <router-link to="/account" class="profil-input">Their Profil</router-link>
     </div>
   </div>
   <span class="vertical-line"></span>

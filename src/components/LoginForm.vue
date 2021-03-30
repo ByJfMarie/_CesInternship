@@ -1,5 +1,12 @@
 <template>
   <div class="connexion">
+  <div class="gauche">
+    <img src="../assets/images/CesIntershipIcon.png">
+    <br>
+    <span class="cesi">CesIntership</span>
+    <div class="ligne"></div>
+  </div>
+  <div class="droite">
     <h1>Login</h1>
     <form action="" method="post" @submit.prevent="handleLogin">
       <p>
@@ -16,10 +23,10 @@
           errors.password[0]
         }}</span>
       </p>
-
       <input type="submit" value="Submit" class="btn-valider" />
       <input type="reset" value="Reset" class="btn-reset" />
     </form>
+  </div>
   </div>
 </template>
 
