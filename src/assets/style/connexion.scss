@@ -1,19 +1,60 @@
 @import 'app.scss';
 
 .connexion {
-
+    margin-top: 100px;
     text-align: center;
     justify-content: center;
-    width: calc(min(535px, 80%));
-    background-color: lightgray;
+    width: 1000px;
+    height:500px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px black;
+    display: flex;
+    flex-direction: row;
+
+    .gauche {
+        margin-top: 60px;
+
+        img {
+            float:left;
+            position:relative;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 40px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow:  17px 17px 33px #9f9f9f,
+             -17px -17px 33px #ffffff;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+
+        .cesi {
+            font-family: "Courier New";
+            position:relative;
+            float: left;
+            font-size: 40px;
+            font-weight: bold;
+            color: $blue_dark;
+            margin-top: 30px;
+        }
+
+        .ligne { 
+            margin-left: 100px;
+            border-left: 2px solid lightgrey; 
+            height: 300px; 
+            display: inline-block;
+            } 
+    }
+
+    .droite {
+        float:left;
+        margin-top:80px;
+        margin-left: 100px;
+    }
 
     h1 {
-
+        
         padding-top: 15px;
         font-size: 25px;
     }       
@@ -32,7 +73,7 @@
                 margin-left: 2vw;
             }
 
-            input[type="text"]{
+            input{
                 
                 font-size: 17px;
                 margin-top: 2px;
@@ -44,7 +85,7 @@
 
             .btn-valider, .btn-reset {
 
-                font-size: 20px;
+                font-size: 18px;
                 padding-left: 7px;
                 padding-top: 5px;
                 padding-bottom: 5px;

@@ -54,8 +54,8 @@ export default {
   name: "AccountForm",
   data(){
     return {
-      admin: false,
-      student: true,
+      admin: true,
+      student: false,
     }
   },
   methods: {

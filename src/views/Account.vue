@@ -19,7 +19,7 @@ import AccountForm from '@/components/AccountForm.vue'
 
 
 export default {
-    name: 'TheirProfil',
+    name: 'Account',
     components: {
         NavBar,
         AccountProfil,
