@@ -1,0 +1,44 @@
+@import 'app.scss';
+
+.offerpage-container {
+
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+
+    .offers-container {
+
+        width: 75%;
+        margin-left: auto;
+        display: inline;
+        margin-left: 50px;
+        margin-right: 25px;
+        padding-right: 25px;
+        height: 700px;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .offerpage-container {
+
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        width: 95%;
+        text-align: center;
+        margin: auto;
+
+        .offers-container {
+
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 0;
+            margin-top: 50px;
+        }
+    }
+}

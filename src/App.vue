@@ -17,8 +17,8 @@
 <script>
 import store from "./store";
 export default {
-  // beforeCreate() {
-  //   this.$store.commit("initializeAuth");
-  // },
+  beforeCreate() {
+    this.$store.commit("initializeAuth");
+  },
 };
 </script>
