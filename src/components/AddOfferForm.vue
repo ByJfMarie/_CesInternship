@@ -97,6 +97,7 @@ export default {
             newOffer.date = this.date;
             newOffer.places_offer = this.places_offer;
             newOffer.details = this.details;
+            newOffer.ID_Company = this.idCompany;
 
             this.namef = '';
             this.duration = '';
