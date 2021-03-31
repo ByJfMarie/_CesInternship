@@ -31,8 +31,10 @@
 
         .text-container{
             display: flex;
+            font-size: 18px;
             justify-content: center;
             align-items: center;
+            padding: 10px;
             background-color: #E8E8E8;
             height: 70%;
             width: 50%;
@@ -71,6 +73,58 @@
         div {
 
             margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .home {
+        .top-banner{
+            .text-container{
+            display: flex;
+            font-size: 14px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #E8E8E8;
+            height: 70%;
+            width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .home {
+        .top-banner{
+            .text-container{
+            display: flex;
+            font-size: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #E8E8E8;
+            height: 70%;
+            width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .home {
+        .top-banner{
+            .text-container{
+            display: flex;
+            font-size: 8px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #E8E8E8;
+            height: 70%;
+            width: 50%;
+            }
         }
     }
 }
