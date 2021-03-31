@@ -44,31 +44,32 @@
         }
 
         input[type="file"]{
-            display:none;
+            display:block;
             padding: 5px;
-            width: 200px;
-            margin-bottom: 40px;
+            width: 400px;
+            margin-bottom: 10px;
             margin-top: 10px;
 
             &:hover{
-                background-color: lightgrey;
+                // background-color: lightgrey;
+                cursor: pointer;
             }
 
         }
 
-        label {
-            padding: 5px;
-            width: 200px;
-            margin-bottom: 40px;
-            margin-top: 10px;
-            border: 1px solid lightgrey;
-            border-radius: 2px;
-            cursor: pointer;
+        // label {
+        //     padding: 5px;
+        //     width: 200px;
+        //     margin-bottom: 40px;
+        //     margin-top: 10px;
+        //     border: 1px solid lightgrey;
+        //     border-radius: 2px;
+        //     cursor: pointer;
 
-            &:hover{
-                background-color: lightgrey;
-            }
-        }
+        //     &:hover{
+        //         background-color: lightgrey;
+        //     }
+        // }
 
         .save{
             border: 2px solid lightgrey;
