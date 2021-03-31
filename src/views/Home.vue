@@ -13,7 +13,8 @@
         </div>
       </div>
       <div class="text-container">
-        <p>Here put site's information</p>
+        <p>CesIntership is an application available for all Cesi's Student. Here you can find the perfect intership for your promotion ! Select the best offer from several criterion, 
+          apply to them and then save them in your whish-list. You will be able to watch the progression of your apply and will be alert at every step !</p>
       </div>
     </div>
     <hr />

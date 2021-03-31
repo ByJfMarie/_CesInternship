@@ -61,5 +61,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/connexion.scss";
+@import "../assets/style/login.scss";
 </style>
