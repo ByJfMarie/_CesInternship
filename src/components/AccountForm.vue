@@ -44,7 +44,7 @@
       <input type="submit" class="disconnect" value="Modify" />
     </form>
     <div v-if="admin">
-      <input type="button" class="delete" value="Delete" />
+      <input type="button" @click="deleteUser" class="delete" value="Delete" />
     </div>
   </div>
 </template>
@@ -77,7 +77,20 @@ export default {
       if(document.getElementById('role').value == "NewDelegate") {
           window.location.href = '/new-delegate'; 
       }
-    }
+    },
+    async deleteUser() {
+            try {
+              console.log(this.form);
+              await axios.get("/sanctum/csrf-cookie");
+              await axios.delete("/api/users/" + this.usersData.id);
+
+              console.log('Supp');
+
+              this.$router.push("../offers");
+            } catch (error) {
+              this.errors = error.response.data.errors;
+            }
+        },
   },
 };
 </script>

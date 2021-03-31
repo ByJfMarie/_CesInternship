@@ -9,7 +9,8 @@
     </div>
     <p class="description">Description</p>
     <div class="input-container">
-      <router-link to="/account" class="profil-input">Their Profil</router-link>
+      <router-link :to="{ name: 'Account', params: { id: usersData.id }}" class="profil-input">Their Profil</router-link>
+      <router-link :to="{ name: 'TheirOffers', params: { id: usersData.id }}" class="offer-input">Their Offers</router-link>
     </div>
   </div>
   <span class="vertical-line"></span>

@@ -12,7 +12,6 @@
           <label for="cv">Select a file...</label>
           <input type="file" id="cv" value="Import">
           <br>
-          <br>
           <span>Add a Motivation Letter</span>
           <br>
           <br>

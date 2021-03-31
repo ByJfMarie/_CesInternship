@@ -10,7 +10,7 @@
       <router-link to="/company" class="navLink">Companies</router-link>
       <router-link v-if="admin" to="/accounts" class="navLink">Accounts</router-link>
       <div class="navProfil">
-        <router-link to="my-profil" v-if="$store.state.user" class="profilLink">My Profil</router-link>
+        <router-link to="/my-profil" v-if="$store.state.user" class="profilLink">My Profil</router-link>
         <img v-if="$store.state.user" src="https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg" alt="">
       </div>
       <button @click="responsive" href="#" class="icon">
