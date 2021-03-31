@@ -53,8 +53,27 @@ export default {
     name: "CreateCompany",
     methods: {
 
-      searchCity(){
-        axios
+      async modifyCompany () {
+        var newCompany = new Object;
+        var newCity = new Object;
+        newCompany.Company_Name = this.namef;
+        newCity.City_Name = this.city;
+        newCompany.Company_Sector = this.sector;
+        newCompany.Company_Email = this.email;
+        newCompany.Company_Phone = this.phone;
+        newCompany.Company_Website = this.website;
+        newCompany.Company_NBStudent = this.nbStudent;
+        newCompany.Company_TutorConfidence = this.confidence;
+
+        console.log(newCity);
+
+        try {
+                await axios.post("/api/cities", newCity);
+
+            } catch (error) {
+            }
+        
+        await axios
             .get('http://cesinternships.test:800/api/cities')
             .then(response => {
                 // JSON responses are automatically parsed.
@@ -66,10 +85,20 @@ export default {
               }
             
             })
-      },
 
-      modifyCompany () {
+        console.log(this.idCity);
 
+        newCompany.ID_City = this.idCity;
+
+        console.log(newCompany);
+
+        try {
+                await axios.put("/api/companies/" + this.data.id, newCompany);
+
+            } catch (error) {
+              console.log(error);
+                this.errors = error.response.data.errors;
+            }
       },
 
       async createCompany () {
@@ -137,14 +166,28 @@ export default {
         confidence: '',
         invisibility: '',
         idCity: '',
+        cityData: null
       }
     },
-    mounted() {
+    async mounted() {
 
-      if (this.data.id) {
+      await axios
+            .get('http://cesinternships.test:800/api/cities/' + this.data.ID_City)
+            .then(response => {
+                // JSON responses are automatically parsed.
+                console.log(response.data);
+              this.cityData = response.data;
+            
+            })
+
+      if (this.data.id && this.cityData) {
+
+
+        console.log(this.cityData.City_Name);
 
         this.namef = this.data.Company_Name;
         this.sector = this.data.Company_Sector;
+        this.city = this.cityData.City_Name;
         this.email = this.data.Company_Email;
         this.phone = this.data.Company_Phone;
         this.website = this.data.Company_Website;

@@ -1,7 +1,7 @@
 <template>
   <div class="connexion">
   <div class="gauche">
-    <img src="../assets/images/CesIntershipIcon.png">
+    <img src="../assets/images/CesIntershipIcon.png" alt="logo">
     <br>
     <span class="cesi">CesIntership</span>
     <div class="ligne"></div>

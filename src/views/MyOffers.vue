@@ -52,12 +52,12 @@ export default {
       // JSON responses are automatically parsed.
         this.nominationsData = response.data;
       })
-      axios
-      .get('http://cesinternship.test/api/users/' + this.id)
-      .then(response => {
-      // JSON responses are automatically parsed.
-        this.usersData = response.data;
-      })
+    //   axios
+    //   .get('http://cesinternships.test:800/api/users')
+    //   .then(response => {
+    //   // JSON responses are automatically parsed.
+    //     this.usersData = response.data;
+    //   })
       axios
       .get('http://cesinternship.test/api/offers')
       .then(response => {

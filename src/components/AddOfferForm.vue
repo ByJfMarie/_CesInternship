@@ -62,7 +62,6 @@ export default {
         }
     },
     created() {
-
         if(this.data.id) {
 
             this.getData();
@@ -96,6 +95,7 @@ export default {
             newOffer.date = this.date;
             newOffer.places_offer = this.places_offer;
             newOffer.details = this.details;
+            console.log(this.idCompany);
             newOffer.ID_Company = this.idCompany;
 
             this.namef = '';
@@ -112,10 +112,12 @@ export default {
         async createOffer() {
 
             var newOffer = this.createForm();
+            console.log(newOffer);
             try {
                 await axios.post("/api/offers", newOffer);
 
             } catch (error) {
+                console.log(error);
                 this.errors = error.response.data.errors;
             }
         },

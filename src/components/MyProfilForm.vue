@@ -27,6 +27,7 @@
     <p v-if="$store.state.user.ID_Role == 1">Student</p>
     <p v-if="$store.state.user.ID_Role == 2">Delegate</p>
     <p v-if="$store.state.user.ID_Role == 3">Pilot</p>
+    <p v-if="$store.state.user.ID_Role == 4">Admin</p>
     <br />
     <br />
     <br />

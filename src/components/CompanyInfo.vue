@@ -10,7 +10,9 @@
       </div>
       <div class="info-group">
           <h1>City</h1>
-          <p>city</p>
+          <div v-if="cityData">
+            <p>{{cityData.City_Name}}</p>
+          </div>
       </div>
       <div class="info-group">
           <h1>Phone</h1>
@@ -28,12 +30,31 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: 'CompanyInfo',
     props: {
 
         data: Object
-    }
+    },
+    data() {
+        return {
+            cdata: null,
+            cityData: null
+        }
+    },
+    created() {
+
+            
+            axios
+            .get('http://cesinternships.test:800/api/cities/' + this.data.ID_City)
+            .then(response => {
+                // JSON responses are automatically parsed.
+                console.log(response.data);
+                this.cityData = response.data;
+            
+            })
+    },
 }
 </script>
 
