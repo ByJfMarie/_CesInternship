@@ -6,7 +6,7 @@
       </div>
       <div class="info-group">
           <h1>Sector</h1>
-          <p>sector</p>
+          <p>{{ data.Company_Sector }}</p>
       </div>
       <div class="info-group">
           <h1>City</h1>
@@ -14,22 +14,26 @@
       </div>
       <div class="info-group">
           <h1>Phone</h1>
-          <p>phone</p>
+          <p>{{ data.Company_Phone }}</p>
       </div>
       <div class="info-group">
           <h1>Email</h1>
-          <p>email</p>
+          <p>{{ data.Company_Email }}</p>
       </div>
       <div class="info-group">
           <h1>Website</h1>
-          <p>website</p>
+          <a href="#">{{ data.Company_Website }}</a>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'CompanyInfo'
+    name: 'CompanyInfo',
+    props: {
+
+        data: Object
+    }
 }
 </script>
 

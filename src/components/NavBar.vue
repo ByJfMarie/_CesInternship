@@ -7,6 +7,7 @@
       </div>
       <router-link to="/home" class="navLink">Home</router-link>
       <router-link to="/offers" class="navLink">Offers</router-link>
+      <router-link to="/company" class="navLink">Companies</router-link>
       <router-link v-if="admin" to="/accounts" class="navLink">Accounts</router-link>
       <div class="navProfil">
         <router-link to="/my-profil" v-if="$store.state.user" class="profilLink">My Profil</router-link>
