@@ -48,16 +48,76 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: "CreateCompany",
     methods: {
 
-      modifyCompany: function() {
+      searchCity(){
+        axios
+            .get('http://cesinternships.test:800/api/cities')
+            .then(response => {
+                // JSON responses are automatically parsed.
+              for(var check in response.data){
+                if (response.data[check].City_Name == this.city) {
+                   this.idCity = response.data[check].id
+                   console.log('Finit');
+                }
+              }
+            
+            })
+      },
+
+      modifyCompany () {
 
       },
 
-      createCompany: function() {
+      async createCompany () {
+        var newCompany = new Object;
+        var newCity = new Object;
+        newCompany.Company_Name = this.namef;
+        newCity.City_Name = this.city;
+        newCompany.Company_Sector = this.sector;
+        newCompany.Company_Email = this.email;
+        newCompany.Company_Phone = this.phone;
+        newCompany.Company_Website = this.website;
+        newCompany.Company_NBStudent = this.nbStudent;
+        newCompany.Company_TutorConfidence = this.confidence;
 
+        console.log(newCity);
+
+        try {
+                await axios.post("/api/cities", newCity);
+
+            } catch (error) {
+            }
+        
+        await axios
+            .get('http://cesinternships.test:800/api/cities')
+            .then(response => {
+                // JSON responses are automatically parsed.
+              for(var check in response.data){
+                if (response.data[check].City_Name == this.city) {
+                   this.idCity = response.data[check].id
+                   console.log('Finit');
+                }
+              }
+            
+            })
+
+        console.log(this.idCity);
+
+        newCompany.ID_City = this.idCity;
+
+        console.log(newCompany);
+
+        try {
+                await axios.post("/api/companies", newCompany);
+
+            } catch (error) {
+              console.log(error);
+                this.errors = error.response.data.errors;
+            }
       }
     },
     props: {
@@ -76,6 +136,7 @@ export default {
         nbStudent: '',
         confidence: '',
         invisibility: '',
+        idCity: '',
       }
     },
     mounted() {
