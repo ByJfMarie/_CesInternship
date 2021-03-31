@@ -1,13 +1,12 @@
 @import 'app.scss';
 
-.company-container {
+.companycard-container {
     display: flex;
     max-width: 1000px;
     border: 2px solid lightgray;
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 15px;
-    margin-top: 20px;
 
     span {
 
@@ -22,10 +21,5 @@
                 cursor: pointer;
             }
         }
-    }
-
-    input {
-
-        justify-self: flex-end;
     }
 }

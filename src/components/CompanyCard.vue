@@ -1,5 +1,5 @@
 <template>
-    <div class="company-container">
+    <div class="companycard-container">
         <span><a @click="company">{{ data.Company_Name }}</a></span>
     </div>
 </template>

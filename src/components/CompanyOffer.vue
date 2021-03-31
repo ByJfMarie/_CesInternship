@@ -38,7 +38,8 @@
           </div>
       </div>
       <br>
-      <input class="delete" v-if="$store.state.user.ID_Role == 4" type="button" @click="deleteOffer()" value="Delete Offer">
+      <input class="delete" type="button" @click="deleteOffer()" value="Delete Offer">
+      <input class="delete" type="button" @click="modifyOffer" value="Modify Offer">
   </div>
 </template>
 
@@ -51,6 +52,7 @@ export default {
             offerData: null,
             companyData: null,
             cityData: null,
+            idForm: 0,
         }
     },
     props: {
@@ -58,28 +60,25 @@ export default {
     },
     created() {
         axios
-      .get('http://cesinternships.test:800/api/offers/' + this.id)
+      .get('http://cesinternship.test/api/offers/' + this.id)
       .then(response => {
       // JSON responses are automatically parsed.
-        console.log(response.data);
         this.offerData = response.data;
 
         if (this.offerData) {
             
             axios
-            .get('http://cesinternships.test:800/api/companies/' + this.offerData.ID_Company)
+            .get('http://cesinternship.test/api/companies/' + this.offerData.ID_Company)
             .then(response => {
                 // JSON responses are automatically parsed.
-            console.log(response.data);
             this.companyData = response.data;
             
             if (this.companyData) {
             
             axios
-            .get('http://cesinternships.test:800/api/cities/' + this.companyData.ID_City)
+            .get('http://cesinternship.test/api/cities/' + this.companyData.ID_City)
             .then(response => {
                 // JSON responses are automatically parsed.
-            console.log(response.data);
             this.cityData = response.data;
             
             })
@@ -93,17 +92,17 @@ export default {
     methods: {
         async deleteOffer() {
             try {
-              console.log(this.form);
               await axios.get("/sanctum/csrf-cookie");
               await axios.delete("/api/offers/" + this.offerData.id);
-
-              console.log('Supp');
 
               this.$router.push("../offers");
             } catch (error) {
               this.errors = error.response.data.errors;
             }
-    },
+        },
+        modifyOffer() {
+
+        }
     },
       
 }

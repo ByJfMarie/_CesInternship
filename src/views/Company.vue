@@ -4,12 +4,8 @@
       <div class="header">
         <h1>Companies</h1>
         <div>
-            <div v-if="idForm==0">
-                <input class="btn" type="button" @click="createCompanyForm" value="Create Company">
-            </div>
-            <div v-else>
-                <input class="btn" type="button" @click="filterForm" value="Search Company">
-            </div>
+            <input v-if="idForm==0" class="btn" type="button" @click="createCompanyForm" value="Create Company">
+            <input v-else class="btn" type="button" @click="filterForm" value="Search Company">
         </div>
       </div>  
       
@@ -18,7 +14,7 @@
               <CreateCompany :idCompany="0" :data="{}" />
           </div>
           <div v-else>
-              <SearchCompany @inputFilter="getFilters"/>
+              <SearchCompany @inputFilters="getFilters"/>
           </div>
           
           <div class="company-offers">
@@ -77,7 +73,7 @@ export default {
           .get(query)
           .then(response => {
           // JSON responses are automatically parsed.
-            this.CompanyData = response.data;
+            this.companyData = response.data;
           })
       }
     },

@@ -21,7 +21,7 @@
       
       <div class="company-container">
           <div v-if="idForm==1">
-              <AddOfferForm :idCompany="companyData.id" :data="companyData" />
+              <AddOfferForm :idCompany="companyData.id" :data="{}" />
           </div>
           <div v-else-if="idForm==2">
               <CreateCompany :data="companyData" />

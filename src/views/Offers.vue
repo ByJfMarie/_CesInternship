@@ -29,8 +29,6 @@ import SearchOffers from "../components/SearchOffers.vue";
 import SearchOfferCard from '@/components/SearchOfferCard.vue';
 import axios from 'axios';
 
-let offersData;
-
 export default {
   components: {
   NavBar,

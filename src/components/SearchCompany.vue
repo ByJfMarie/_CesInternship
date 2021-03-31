@@ -32,7 +32,7 @@ export default {
             namef: '',
             city: '',
             sector: '',
-            nbrStudents: Number,
+            nbrStudents: 0,
             trust: 0,
 
         }
@@ -47,7 +47,6 @@ export default {
             filterList.sector = this.sector;
             filterList.nbrStudents = this.nbrStudents;
             filterList.trust = this.trust;
-
             this.$emit('inputFilters', filterList);
         }
     },

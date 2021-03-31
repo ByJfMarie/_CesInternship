@@ -32,11 +32,11 @@
         <label for="details">Details</label><br>
         <textarea name="details" v-model="details"></textarea>
     </div><br>
-    <div v-if="data">
-        <a href="#" @click="modifyOffer" class="createBtn">Modify Offer</a>
+    <div v-if="data.id">
+        <a @click="modifyOffer" class="createBtn">Modify Offer</a>
     </div>
     <div v-else>
-        <a href="#" @click="createOffer" class="createBtn">Create Offer</a>
+        <a @click="createOffer" class="createBtn">Create Offer</a>
     </div>
   </div>
 </template>

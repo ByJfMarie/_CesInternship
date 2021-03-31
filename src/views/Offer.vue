@@ -1,8 +1,8 @@
 <template>
   <div>
       <NavBar />
-      <CompanyOffer :id = "id" />
-      <ApplyReview :id ="id" />
+      <CompanyOffer :id="id" />
+      <ApplyReview :id="id" />
   </div>
 </template>
 
