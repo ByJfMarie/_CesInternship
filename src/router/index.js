@@ -64,9 +64,9 @@ const routes = [
     component: () => import('../views/Company.vue')
   },
   {
-    path: '/company-page',
+    path: '/company-page/:id',
     name: 'CompanyPage',
-    // props: true,
+    props: true,
     component: () => import('../views/CompanyPage.vue')
   }
   

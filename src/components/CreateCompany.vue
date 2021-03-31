@@ -1,57 +1,100 @@
 <template>
-  <div class="company-container">
-      <h1>Create a Company</h1>
-      <br>
-      <form>
-      <span>Name</span>
-        <br>
-        <input type="text" placeholder="Name">
-        <br>
-        <span>Location</span>
-        <br>
-        <select name="country" v-model="locationCountry">
-            <option value="">Choose a Country...</option>
-            <option value="France">France</option>
-            <option value="Amerique">Amerique</option>
-        </select>
-        <br>
-        <select name="state" id="selectState" v-model="locationState">
-            <option value="">Choose a State...</option>
-            <option value="Normandie">Normandie</option>
-            <option value="Creuse">Creuse</option>
-        </select>
-        <br>
-        <span>Sector</span>
-        <br>
-        <select id="sector">
-            <option value="">Choose a Sector...</option>
-            <option value="BTP">BTP</option>
-            <option value="Administration">Administration</option>
-            <option value="IT">IT</option>
-            <option value="Digital">Digital</option>
-        </select>
-        <br>
-        <span>Number of Student</span>
-        <br>
-        <input type="number" placeholder="Number of student">
-        <br>
-        <span>Tutor Confidence</span>
-        <br>
-        <input type="number" step="0.5" max="5" placeholder="Note">
-        <br>
-        <input type="checkbox" placeholder="Number">
-        <label>Invisibility</label>
-        <br>
-        <input type="submit" id="submit" value="Submit">
-      </form>
-        <br>
+  <div class="createcompany-container">
+    <div class="form-group">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" placeholder="Name" v-model="namef">
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label><br>
+        <input type="text" name="location" placeholder="City" v-model="city">
+    </div>
+    <div class="form-group">
+        <label for="sector">Sector</label><br>
+        <input type="text" name="sector" v-model="sector">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label><br>
+        <input type="text" name="email" v-model="email">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label><br>
+        <input type="text" name="phone" v-model="phone">
+    </div>
+    <div class="form-group">
+        <label for="website">Website</label><br>
+        <input type="text" name="website" v-model="website">
+    </div>
+    <div class="form-group">
+        <label for="nbStudents">Number of Students</label><br>
+        <input type="text" name="nbStudents" v-model="nbStudent">
+    </div>
+    <div class="form-group">
+        <label for="date">Tutor Confidence</label><br>
+        <input type="text" name="confidence" placeholder="Grade / 5" v-model="confidence">
+        
+    </div>
+    <div class="form-group">
+        <input type="checkbox" name="invisibility" v-model="invisibility">
+        <label class="labelInvisibility" for="invisibility">Invisibility</label>
+    </div><br>
+
+    <div v-if="data.id">
+        <a @click="modifyCompany" class="createBtn">Modify Company</a>
+    </div>
+    <div v-else>
+        <a @click="createCompany" class="createBtn">Create Company</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "CreateCompany"
+    name: "CreateCompany",
+    methods: {
+
+      modifyCompany: function() {
+
+      },
+
+      createCompany: function() {
+
+      }
+    },
+    props: {
+
+      data: Object
+    },
+    data() {
+      return {
+
+        namef: '',
+        city: '',
+        sector: '',
+        email: '',
+        phone: '',
+        website: '',
+        nbStudent: '',
+        confidence: '',
+        invisibility: '',
+      }
+    },
+    mounted() {
+
+      if (this.data.id) {
+
+        this.namef = this.data.Company_Name;
+        this.sector = this.data.Company_Sector;
+        this.email = this.data.Company_Email;
+        this.phone = this.data.Company_Phone;
+        this.website = this.data.Company_Website;
+        this.nbStudent = this.data.Company_NBStudent;
+        this.confidence = this.data.Company_TutorConfidence;
+        this.invisibility = this.data.Invisibility;
+      }
+      
+    }
 }
+
 </script>
 
 <style scoped lang="scss">

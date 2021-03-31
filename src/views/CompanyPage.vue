@@ -2,23 +2,40 @@
   <div>
       <NavBar />
       <div class="header">
-        <h1>Name of the Company</h1>
+        <h1>{{ companyData.Company_Name }}</h1>
         <div>
-            <input class="btn" type="button" value="Modify Company">
-            <input class="btn" type="button" value="Create Offer">
+            <div v-if="idForm==0">
+                <input class="btn" type="button" @click="modifyCompanyForm" value="Modify Company">
+                <input class="btn" type="button" @click="createOfferForm" value="Create Offer">
+            </div>
+            <div v-else-if="idForm==1">
+                <input class="btn" type="button" @click="modifyCompanyForm" value="Modify Company">
+                <input class="btn" type="button" @click="infoForm" value="Info Company">
+            </div>
+            <div v-else>
+                <input class="btn" type="button" @click="infoForm" value="Info Company">
+                <input class="btn" type="button" @click="createOfferForm" value="Create Offer">
+            </div>
         </div>
       </div>  
       
       <div class="company-container">
-          <CompanyInfo />
+          <div v-if="idForm==1">
+              <AddOfferForm :idCompany="companyData.id" :data="companyData" />
+          </div>
+          <div v-else-if="idForm==2">
+              <CreateCompany :data="companyData" />
+          </div>
+          <div v-else>
+              <CompanyInfo :data="companyData" />
+          </div>
+          
           <div class="company-offers">
-              <CompanyCard />
-              <CompanyCard />
-              <CompanyCard />
-              <CompanyCard />
-              <CompanyCard />
-              <CompanyCard />
-              <CompanyCard />
+              <div v-for="offers in offersData" v-if="companyData">
+                  <div v-if="offers.ID_Company==companyData.id">
+                      <SearchOfferCard :data="offers" :cdata="companyData" />
+                  </div>
+              </div>
           </div>
       </div>
   </div>
@@ -27,16 +44,63 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import CompanyInfo from '@/components/CompanyInfo.vue'
-import CompanyCard from '@/components/CompanyCard.vue'
+import SearchOfferCard from '@/components/SearchOfferCard.vue'
+import AddOfferForm from '@/components/AddOfferForm.vue'
+import CreateCompany from '@/components/CreateCompany.vue'
+import axios from 'axios';
 export default {
     name: 'CompanyPage',
-    props: {
-        id: null
+    data() {
+        return {
+
+            idForm: 0,
+            id: null,
+            companyData: Object,
+            offersData: Object
+        }
+    },
+    methods: {
+
+        createOfferForm: function() {
+
+            this.idForm = 1;
+        },
+        modifyCompanyForm: function() {
+
+            this.idForm = 2
+        },
+        infoForm: function() {
+
+            this.idForm = 0;
+        }
     },
     components:  {
         CompanyInfo,
         NavBar,
-        CompanyCard
+        SearchOfferCard,
+        AddOfferForm,
+        CreateCompany
+    },
+    created() {
+
+        this.id = this.$route.params.id;
+    },
+
+    mounted() {
+
+        axios
+            .get('http://cesinternship.test/api/companies/' + this.id)
+            .then(response => {
+            // JSON responses are automatically parsed.
+            this.companyData = response.data;
+      })
+
+      axios
+            .get('http://cesinternship.test/api/offers')
+            .then(response => {
+            // JSON responses are automatically parsed.
+            this.offersData = response.data;
+      })
     }
 }
 </script>

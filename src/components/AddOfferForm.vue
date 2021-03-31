@@ -46,7 +46,8 @@ import axios from "axios";
 export default {
     name: 'AddOfferForm',
     props: {
-        data: Object,
+        idCompany: null,
+        data: Object
     },
     data() {
         return {
