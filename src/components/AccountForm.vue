@@ -1,23 +1,23 @@
 <template>
-  <div v-if="usersData" class="myaccount-container">
+  <div v-if="data" class="myaccount-container">
     <span>Email</span>
     <br />
     <br />
-    <p >{{ usersData.email }}</p>
+    <p >{{ data.email }}</p>
     <br />
     <br />
     <br />
     <span>Center</span>
     <br />
     <br />
-    <p >{{ usersData.Center}}</p>
+    <p >{{ data.Center}}</p>
     <br />
     <br />
     <br />
     <span>Promotion</span>
     <br />
     <br />
-    <p >{{ usersData.promotion }}</p>
+    <p >{{ data.promotion }}</p>
     <br />
     <br />
     <br />
@@ -25,74 +25,30 @@
     <br />
     <br />
 
-      <p v-if="usersData.ID_Role == 1">Student</p>
-      <p v-if="usersData.ID_Role == 2">Delegate</p>
-      <p v-if="usersData.ID_Role == 3">Pilot</p>
-    <div v-if="usersData.ID_Role == 4">
-      <select class="role" name="role" id="role" v-on:change="select()">
-        <option value="Student">Student</option>
-        <option value="Admin">Admin</option>
-        <option value="Pilot">Pilot</option> 
-        <option value="Delegate">Delegate Administration</option>
-        <option value="NewDelegate">New Delegate</option>
-      </select>
-    </div>
+      <p v-if="data.ID_Role == 1">Student</p>
+      <p v-if="data.ID_Role == 2">Delegate</p>
+      <p v-if="data.ID_Role == 3">Pilot</p>
+      <p v-if="data.ID_Role==4">Admin</p>
     <br />
     <br />
     <br />
-    <form action="" method="post" @submit.prevent="handleLogout">
-      <input type="submit" class="disconnect" value="Modify" />
-    </form>
-    <div v-if="admin">
-      <input type="button" @click="deleteUser" class="delete" value="Delete" />
-    </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
 export default {
   name: "AccountForm",
   props:{
-    id: String
+    data: Object
   },
   data(){
     return {
-      usersData: null,
       admin: true,
       student: false,
     }
   },
-  created() {
-    axios
-      .get('http://cesinternships.test:800/api/users/' + this.id)
-      .then(response => {
-      // JSON responses are automatically parsed.
-        this.usersData = response.data;
-        console.log(this.id);
-      })
-  },
-  methods: {
-    select: function(){
-      if(document.getElementById('role').value == "NewDelegate") {
-          window.location.href = '/new-delegate'; 
-      }
-    },
-    async deleteUser() {
-            try {
-              console.log(this.form);
-              await axios.get("/sanctum/csrf-cookie");
-              await axios.delete("/api/users/" + this.usersData.id);
-
-              console.log('Supp');
-
-              this.$router.push("../offers");
-            } catch (error) {
-              this.errors = error.response.data.errors;
-            }
-        },
-  },
-};
+    
+  }
 </script>
 
 <style scoped lang="scss">

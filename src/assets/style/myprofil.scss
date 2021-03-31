@@ -22,6 +22,52 @@
         margin-right: 25px;
         padding-right: 25px;
         height: 700px;
+
+        input {
+
+            float: left;
+        }
+
+        .delete {
+            background-color: $red;
+            color: white;
+            width: 103px;
+            border:none;
+            border-radius: 2px;
+            margin-top: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            transition-duration: 100ms;
+    
+            &:hover {
+    
+                filter: brightness(108%);
+                transition-duration: 100ms;
+            }
+        }
+
+        .modify {
+            background-color: $blue-light;
+            color: white;
+            width: 103px;
+            border:none;
+            border-radius: 2px;
+            margin-top: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            transition-duration: 100ms;
+            margin-right: 10px;
+    
+            &:hover {
+    
+                filter: brightness(108%);
+                transition-duration: 100ms;
+            }
+        }
     }
 }
 

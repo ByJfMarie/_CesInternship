@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <NavBar />
-    <AddOfferForm />
+    <AddOfferForm :idCompany="0" :data="{}" />
   </div>
 </template>
 

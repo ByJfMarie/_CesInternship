@@ -10,8 +10,8 @@
     </div>
     <div class="form-group">
         <label for="skills">Skills</label><br>
-        <input type="text" v-model="newSkill">
-        <a href="#" @click="appendSkill" class="addSkill">Add</a>
+        <input name="skills" type="text" v-model="newSkill">
+        <a @click="appendSkill" class="addSkill">Add</a>
         <ul>
             <li v-for="skill in skills" @click="deleteSkill(skills.indexOf(skill))">{{ skill }}</li>
         </ul>
@@ -63,7 +63,7 @@ export default {
     },
     created() {
 
-        if(this.data) {
+        if(this.data.id) {
 
             this.getData();
         }
@@ -71,7 +71,6 @@ export default {
     methods: {
         appendSkill() {
             this.skills.push(this.newSkill);
-            this.newSkill = ''
         },
         deleteSkill(id) {
             var a = this.skills.splice(id, 1)
