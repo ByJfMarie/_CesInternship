@@ -147,6 +147,16 @@ export default {
               console.log(error);
                 this.errors = error.response.data.errors;
             }
+
+            this.namef= '',
+        this.city= '',
+        this.sector= '',
+        this.email= '',
+        this.phone= '',
+        this.website= '',
+        this.nbStudent= '',
+        this.confidence= '',
+        this.invisibility= ''
       }
     },
     props: {

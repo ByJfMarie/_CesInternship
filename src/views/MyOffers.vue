@@ -47,7 +47,7 @@ export default {
     },
     mounted() {
         axios
-      .get('http://cesinternship.test/api/nominations')
+      .get('http://cesinternships.test:800/api/nominations')
       .then(response => {
       // JSON responses are automatically parsed.
         this.nominationsData = response.data;
@@ -59,13 +59,13 @@ export default {
     //     this.usersData = response.data;
     //   })
       axios
-      .get('http://cesinternship.test/api/offers')
+      .get('http://cesinternships.test:800/api/offers')
       .then(response => {
       // JSON responses are automatically parsed.
         this.offersData = response.data;
       })
       axios
-      .get('http://cesinternship.test/api/companies')
+      .get('http://cesinternships.test:800/api/companies')
       .then(response => {
       // JSON responses are automatically parsed.
         this.companiesData = response.data;

@@ -49,7 +49,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://cesinternship.test/api/users/' + this.id)
+            .get('http://cesinternships.test:800/api/users/' + this.id)
             .then(response => {
             // JSON responses are automatically parsed.
             this.accountData = response.data;

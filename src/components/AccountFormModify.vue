@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: 'AccountFormModify',
     props: {
@@ -71,7 +72,21 @@ export default {
     methods: {
 
         modify() {
+            var newAccount = new Object;
+        newAccount.email = this.email;
+        newAccount.Center = this.center;
+        newAccount.promotion = this.promotion;
+        newAccount.ID_Role = this.role;
 
+
+
+        try {
+                axios.put("/api/users/" + this.data.id, newAccount);
+
+            } catch (error) {
+              console.log(error);
+                this.errors = error.response.data.errors;
+            }
             
         }
     }
