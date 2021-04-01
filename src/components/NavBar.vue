@@ -8,7 +8,7 @@
       <router-link to="/home" class="navLink">Home</router-link>
       <router-link to="/offers" class="navLink">Offers</router-link>
       <router-link to="/company" class="navLink">Companies</router-link>
-      <router-link v-if="admin" to="/accounts" class="navLink">Accounts</router-link>
+      <router-link v-if="$store.state.user.ID_Role == 4 || $store.state.user.ID_Role == 3" to="/accounts" class="navLink">Accounts</router-link>
       <div class="navProfil">
         <router-link to="/my-profil" v-if="$store.state.user" class="profilLink">My Profil</router-link>
         <img v-if="$store.state.user" src="https://assets-jpcust.jwpsrv.com/thumbnails/2yzd2pt3-1920.jpg" alt="">
@@ -23,11 +23,6 @@
 <script>
 export default {
     name: "NavBar",
-    data(){
-      return{
-        admin: true,
-      }
-    },
     methods: {
     responsive: function () {
       console.log("Ouverture");

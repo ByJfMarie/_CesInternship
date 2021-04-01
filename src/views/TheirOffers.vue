@@ -3,7 +3,7 @@
         <NavBar />
 
         <div class="profil-container">
-            <AccountProfil :id="id" />
+            <AccountProfil :data="usersData" />
             <div class="line"></div>
             <div class="myoffers-container">
                 <div v-for="nominations in nominationsData" v-if="offersData">

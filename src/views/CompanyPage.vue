@@ -3,7 +3,7 @@
       <NavBar />
       <div class="header">
         <h1>{{ companyData.Company_Name }}</h1>
-        <div>
+        <div v-if="$store.state.user.ID_Role == 4">
             <div v-if="idForm==0">
                 <input class="btn" type="button" @click="modifyCompanyForm" value="Modify Company">
                 <input class="btn" type="button" @click="createOfferForm" value="Create Offer">
@@ -20,10 +20,10 @@
       </div>  
       
       <div class="company-container">
-          <div v-if="idForm==1">
+          <div v-if="idForm==1 && $store.state.user.ID_Role == 4">
               <AddOfferForm :idCompany="companyData.id" :data="{}" />
           </div>
-          <div v-else-if="idForm==2">
+          <div v-else-if="idForm==2 && $store.state.user.ID_Role == 4">
               <CreateCompany :data="companyData" />
           </div>
           <div v-else>

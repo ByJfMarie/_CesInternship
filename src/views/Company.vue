@@ -3,7 +3,7 @@
       <NavBar />
       <div class="header">
         <h1>Companies</h1>
-        <div>
+        <div v-if="$store.state.user.ID_Role == 4">
             <input v-if="idForm==0" class="btn" type="button" @click="createCompanyForm" value="Create Company">
             <input v-else class="btn" type="button" @click="filterForm" value="Search Company">
         </div>

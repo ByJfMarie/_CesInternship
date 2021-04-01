@@ -8,13 +8,13 @@
             <div class="myprofil-container">
                 <div v-if="idForm==0">
                     <AccountForm :data="accountData" />
-                    <input class="modify" @click="modifyForm" type="button" value="Modify User">
+                    <input v-if="$store.state.user.ID_Role == 4" class="modify" @click="modifyForm" type="button" value="Modify User">
                 </div>
                 <div v-else>
                     <AccountFormModify :data="accountData" />
-                    <input class="modify" type="button" @click="infoForm" value="Cancel">
+                    <input v-if="$store.state.user.ID_Role == 4" class="modify" type="button" @click="infoForm" value="Cancel">
                 </div>
-                <input class="delete" type="button" @click="deteteUser" value="Delete">
+                <input v-if="$store.state.user.ID_Role == 4" class="delete" type="button" @click="deteteUser" value="Delete">
             </div>
         </div>
     </div>
