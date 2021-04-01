@@ -89,14 +89,14 @@ export default {
     mounted() {
 
         axios
-            .get('http://cesinternships.test:800/api/companies/' + this.id)
+            .get('http://cesinternship.test/api/companies/' + this.id)
             .then(response => {
             // JSON responses are automatically parsed.
             this.companyData = response.data;
       })
 
       axios
-            .get('http://cesinternships.test:800/api/offers')
+            .get('http://cesinternship.test/api/offers')
             .then(response => {
             // JSON responses are automatically parsed.
             this.offersData = response.data;

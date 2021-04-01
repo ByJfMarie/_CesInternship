@@ -74,7 +74,7 @@ export default {
             }
         
         await axios
-            .get('http://cesinternships.test:800/api/cities')
+            .get('http://cesinternship.test/api/cities')
             .then(response => {
                 // JSON responses are automatically parsed.
               for(var check in response.data){
@@ -122,7 +122,7 @@ export default {
             }
         
         await axios
-            .get('http://cesinternships.test:800/api/cities')
+            .get('http://cesinternship.test/api/cities')
             .then(response => {
                 // JSON responses are automatically parsed.
               for(var check in response.data){
@@ -182,7 +182,7 @@ export default {
     async mounted() {
 
       await axios
-            .get('http://cesinternships.test:800/api/cities/' + this.data.ID_City)
+            .get('http://cesinternship.test/api/cities/' + this.data.ID_City)
             .then(response => {
                 // JSON responses are automatically parsed.
                 console.log(response.data);

@@ -51,7 +51,7 @@ export default {
         this.$store.commit("setAuth", response.data);
 
 
-        this.$router.push("about");
+        this.$router.push("home");
       } catch (error) {
         this.errors = error.response.data.errors;
       }
